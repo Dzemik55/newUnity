@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2287044819039747279}
   - component: {fileID: 8395317141875308905}
   - component: {fileID: 96489229065212138}
+  - component: {fileID: -4884199373786429591}
   m_Layer: 0
   m_Name: papryczka_czerwona
   m_TagString: Untagged
@@ -121,3 +122,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2477511411847689622, guid: 673fe3d89ae9cbc41a880b0050895ce6, type: 3}
+--- !u!114 &-4884199373786429591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7602522721759754954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f954c4511b21d4849ad14b9af14a1ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

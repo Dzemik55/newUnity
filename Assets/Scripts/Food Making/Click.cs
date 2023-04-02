@@ -11,7 +11,7 @@ public class Click : MonoBehaviour
     void Start()
     {
         spawnPosition.y += + 0.025f;
-        Debug.Log(Click.spawnPosition.y);
+
     }
 
 

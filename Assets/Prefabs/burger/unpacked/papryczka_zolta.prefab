@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 617838990903683098}
   - component: {fileID: 4319088389440645878}
   - component: {fileID: -7730775749814581673}
+  - component: {fileID: 1906061938297703190}
   m_Layer: 0
   m_Name: papryczka_zolta
   m_TagString: Untagged
@@ -121,3 +122,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7807538432633192378, guid: 673fe3d89ae9cbc41a880b0050895ce6, type: 3}
+--- !u!114 &1906061938297703190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3690629278073781975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f954c4511b21d4849ad14b9af14a1ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

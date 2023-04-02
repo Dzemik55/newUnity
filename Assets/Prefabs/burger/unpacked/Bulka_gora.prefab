@@ -3499,6 +3499,7 @@ GameObject:
   - component: {fileID: 4919065941698597177}
   - component: {fileID: 3766623775711839110}
   - component: {fileID: 2126209082064866285}
+  - component: {fileID: 2895223362523489721}
   m_Layer: 0
   m_Name: Bulka_gora
   m_TagString: Untagged
@@ -3657,6 +3658,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: 673fe3d89ae9cbc41a880b0050895ce6, type: 3}
+--- !u!114 &2895223362523489721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280864748358841144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f954c4511b21d4849ad14b9af14a1ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6569697186212017531
 GameObject:
   m_ObjectHideFlags: 0

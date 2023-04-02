@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1378160020744751338}
   - component: {fileID: -6145592595947038014}
   - component: {fileID: 6038801688585103607}
+  - component: {fileID: 2907936838888086620}
   m_Layer: 0
   m_Name: pomidor
   m_TagString: Untagged
@@ -121,3 +122,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5053925668127403250, guid: 673fe3d89ae9cbc41a880b0050895ce6, type: 3}
+--- !u!114 &2907936838888086620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3294463207477917902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f954c4511b21d4849ad14b9af14a1ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

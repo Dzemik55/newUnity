@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2238117801035270926}
   - component: {fileID: -7853967864591673182}
   - component: {fileID: 2279973754529138263}
+  - component: {fileID: 4385662646414543085}
   m_Layer: 0
   m_Name: salata
   m_TagString: Untagged
@@ -121,3 +122,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5577429918001518612, guid: 673fe3d89ae9cbc41a880b0050895ce6, type: 3}
+--- !u!114 &4385662646414543085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7373354531343456118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f954c4511b21d4849ad14b9af14a1ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
