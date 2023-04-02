@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Click : MonoBehaviour
@@ -10,14 +8,14 @@ public class Click : MonoBehaviour
 
     void Start()
     {
-        spawnPosition.y += + 0.025f;
+        spawnPosition.y += +0.025f;
 
     }
 
 
     void Update()
     {
-        
+
     }
 
     private void OnMouseDown()
@@ -34,8 +32,8 @@ public class Click : MonoBehaviour
             spawnPosition.y += 0.025f;
             Debug.Log(Click.spawnPosition.y);
         }
-        if (gameObject.name == "Ser") 
-        { 
+        if (gameObject.name == "Ser")
+        {
             Instantiate(cloneObj, new Vector3(-0.0152646303f, spawnPosition.y, 5.16599989f), cloneObj.rotation);
             spawnPosition.y += 0.025f;
             Debug.Log(Click.spawnPosition.y);
@@ -49,7 +47,7 @@ public class Click : MonoBehaviour
 
         if (gameObject.name == "Kotlet")
         {
-            Instantiate (cloneObj, new Vector3(0.5f, -2.197392f+0.1f, 4.71999979f), cloneObj.rotation);
+            Instantiate(cloneObj, new Vector3(0.5f, -2.197392f + 0.1f, 4.71999979f), cloneObj.rotation);
         }
 
         GameFlow.plateValue += foodValue;

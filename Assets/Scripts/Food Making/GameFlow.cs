@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameFlow : MonoBehaviour
@@ -8,12 +6,12 @@ public class GameFlow : MonoBehaviour
     public static int plateValue = 00000;
     void Start()
     {
-        
+
     }
 
 
     void Update()
     {
-        
+
     }
 }

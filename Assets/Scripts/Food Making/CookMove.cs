@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CookMove : MonoBehaviour
@@ -20,7 +19,7 @@ public class CookMove : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     private void OnMouseDown()
