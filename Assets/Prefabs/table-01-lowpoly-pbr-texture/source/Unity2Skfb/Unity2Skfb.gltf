@@ -1,0 +1,211 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 208,
+      "type": "VEC3",
+      "max": [
+        0.40000006556510925,
+        0.75,
+        0.39999997615814209
+      ],
+      "min": [
+        -0.40000024437904358,
+        -1.5308084002953373E-17,
+        -0.39999997615814209
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 208,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 208,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        -1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 208,
+      "type": "VEC2",
+      "max": [
+        0.96500146389007568,
+        0.98741394281387329
+      ],
+      "min": [
+        0.017651082947850227,
+        0.01335572823882103
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 324,
+      "type": "SCALAR",
+      "max": [
+        207.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "generator": "UnityGLTF (2018.2.9f1)",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "Unity2Skfb.bin",
+      "byteLength": 11280
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2496
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2496,
+      "byteLength": 2496
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4992,
+      "byteLength": 3328
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8320,
+      "byteLength": 1664
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 9984,
+      "byteLength": 1296
+    }
+  ],
+  "images": [
+    {
+      "uri": "50170_re_tb_01_N.png",
+      "name": "re_tb_01_N"
+    },
+    {
+      "uri": "12920_re_tb_01_alb.jpg",
+      "name": "re_tb_01_alb"
+    },
+    {
+      "uri": "50174_re_tb_01_Met.png",
+      "name": "re_tb_01_Met"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5,
+        "metallicRoughnessTexture": {
+          "index": 2
+        }
+      },
+      "normalTexture": {
+        "index": 0
+      },
+      "occlusionTexture": {
+        "index": 2
+      },
+      "name": "re_tb_01"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "re_tb_01"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "rotation": [
+        2.18556941E-08,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "name": "re_tb_01"
+    }
+  ],
+  "samplers": [
+    {
+      "minFilter": 9729
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "Unity2Skfb"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "re_tb_01_N"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "re_tb_01_alb"
+    },
+    {
+      "sampler": 0,
+      "source": 2,
+      "name": "re_tb_01_Met"
+    }
+  ]
+}

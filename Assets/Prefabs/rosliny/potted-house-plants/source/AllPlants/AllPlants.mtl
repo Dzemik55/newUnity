@@ -1,0 +1,90 @@
+# Blender MTL File: 'RapidReact.blend'
+# Material Count: 8
+
+newmtl M_ClayPot1
+Ns 380.250007
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.370000 0.370000 0.370000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\3D Models\\Textures\\RapidReact\\PlantsLargeUV.png
+
+newmtl M_ClayPot2
+Ns 380.250007
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.370000 0.370000 0.370000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\3D Models\\Textures\\RapidReact\\PlantsSmallUV.png
+
+newmtl M_Dirt
+Ns 35.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.050000 0.050000 0.050000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\3D Models\\Textures\\RapidReact\\PlantsLargeUV.png
+
+newmtl M_Dirt2
+Ns 35.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.050000 0.050000 0.050000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\3D Models\\Textures\\RapidReact\\PlantsSmallUV.png
+
+newmtl M_GrassyLeaf
+Ns 302.760014
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\3D Models\\Textures\\RapidReact\\PlantsLargeUV.png
+
+newmtl M_IvyLeaf
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\3D Models\\Textures\\RapidReact\\PlantsSmallUV.png
+
+newmtl M_LargeLeaf
+Ns 492.840013
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\3D Models\\Textures\\RapidReact\\PlantsLargeUV.png
+
+newmtl M_SmallLeaf
+Ns 380.250007
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\3D Models\\Textures\\RapidReact\\PlantsSmallUV.png
