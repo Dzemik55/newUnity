@@ -159,9 +159,9 @@ public class MakeACoffe : MonoBehaviour
         {
             Kawa = "Latte";
         }
-        if (buttonName == "Mocha_button")
+        if (buttonName == "Cappucino_button")
         {
-            Kawa = "Mocha";
+            Kawa = "Cappucino";
         }
         Debug.Log(Kawa);
     }
@@ -178,6 +178,7 @@ public class MakeACoffe : MonoBehaviour
             kawkaObject = collider.GetComponent<Kawka>();
             if (kawkaObject != null)
             {
+                StopAllCoroutines();
                 StartCoroutine(WyswietlKomuniktat(IstniejeKawkaText));
                 break;
             }
@@ -203,7 +204,7 @@ public class MakeACoffe : MonoBehaviour
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().naWynos = naWynos;
                     WylaczPanel();
                 }
-                if (Kawa == "Mocha" && !naWynos)
+                if (Kawa == "Cappucino" && !naWynos)
                 {
                     ostatnioUtworzonyObiekt = Instantiate(KawkaMochaObject, positionToCheck, Quaternion.identity);
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
