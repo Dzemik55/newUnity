@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class CheckAndMoveToFreePoint : MonoBehaviour
 {
+
+    public Gradient Gradient=new Gradient();
+    public Material Material;
+    public GameObject wynik;
+    private float lerpValue;
     public GameObject WaypointsList;
     public GameObject RegistersList;
     public GameObject ExitList;
@@ -17,9 +25,20 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
     public GameObject currentRegister;
     private int lastCheckedIndex = -1;
     public bool isLeaving = false;
-
+    public float patienceDuration; // Czas w sekundach
+    public float maxPatienceValue = 100f;
+    public float minPatienceValue = 0f;
+    public float timeElapsed = 0f;
+    public int ocena = 1;
+    public float currentPatienceValue;
     private void Start()
     {
+
+        Material=GetComponentInChildren<MeshRenderer>().material;
+        Material.color = Color.green;
+        patienceDuration = 5f;
+        wynik = GameObject.Find("wynik");
+        currentPatienceValue = maxPatienceValue;
         WaypointsList = GameObject.Find("Queue");
         RegistersList = GameObject.Find("Register");
         ExitList = GameObject.Find("Exit");
@@ -48,12 +67,9 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
         }
         
     }
-    private void Update()
+    void Update()
     {
-        if (!isActive)
-        {
-            
-        }
+        
     }
     private IEnumerator MoveToFreePoint()
     {
@@ -122,6 +138,7 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                 // Reset the current register and disable the agent
                 isActive = false;
                 isLeaving = false;
+                punkty.score +=(ocena * currentPatienceValue);
                 Destroy(gameObject);
             }
         }
@@ -133,15 +150,35 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
         // Wait for player to look at the agent and press F
         while (true)
         {
+            if (!isLeaving)
+            {
+                lerpValue = currentPatienceValue / 100f; // wartoœæ lerp miêdzy 0 a 1
+                Material.color = Color.Lerp(Color.red, Color.green, currentPatienceValue / 100f);
+                timeElapsed += Time.deltaTime;
+                if (timeElapsed > patienceDuration)
+                {
+                    currentPatienceValue = Mathf.Lerp(maxPatienceValue, minPatienceValue, Mathf.InverseLerp(0f, patienceDuration, timeElapsed- patienceDuration));
+                }
+                else
+                {
+                    currentPatienceValue = 100;
+                }
+            }
+            if(currentPatienceValue==0)
+            {
+                isLeaving = true;
+                break;
+            }
             // Check if the player is looking at the agent
             Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(cameraRay, out hit) && hit.collider.gameObject == gameObject)
             {
                 // Player is looking at the agent, wait for F key press
-                isLeaving = true;
+                
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    isLeaving = true;
                     break;
                 }
             }

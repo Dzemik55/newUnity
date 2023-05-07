@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a80f821560bb4846ac14d104db663f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wynik: {fileID: 0}
   WaypointsList: {fileID: 0}
   RegistersList: {fileID: 0}
   ExitList: {fileID: 0}
@@ -107,6 +108,12 @@ MonoBehaviour:
   waypoints: []
   currentRegister: {fileID: 0}
   isLeaving: 0
+  patienceDuration: 0
+  maxPatienceValue: 100
+  minPatienceValue: 0
+  timeElapsed: 0
+  ocena: 1
+  currentPatienceValue: 0
 --- !u!195 &8697160150702620702
 NavMeshAgent:
   m_ObjectHideFlags: 0
