@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,8 +10,17 @@ public class MakeACoffe : MonoBehaviour
     bool isPanelActive = false;
     public Slider cukierSlider;
     public Slider mlekoSlider;
-    public GameObject KawkaObject;
+    public GameObject KawkaLatteObject;
+    public GameObject KawkaMochaObject;
+    public GameObject KawkaAmericanoObject;
+    public GameObject NaWynosObject;
     private GameObject ostatnioUtworzonyObiekt;
+    public TextMeshProUGUI IstniejeKawkaText;
+    public Toggle naWynosToggle;
+    public bool naWynos = false;
+
+    public float interactionDistance;
+    public Transform playerTransform;
 
     FirstPersonLook firstPersonLook;
 
@@ -35,10 +46,17 @@ public class MakeACoffe : MonoBehaviour
                 firstPersonLook.canRotate = true;
                 panel.GetComponent<Image>().enabled = false;
                 isPanelActive = false;
+                iloscCukru = 0;
+                iloscMleka = 0;
+                cukierSlider.value = 0;
+                mlekoSlider.value = 0;
+                naWynosToggle.isOn = false;
+                naWynos = false;
                 Transform[] children = panel.GetComponentsInChildren<Transform>(true);
 
                 foreach (Transform child in children)
                 {
+
                     child.gameObject.SetActive(false);
                 }
             }
@@ -59,14 +77,30 @@ public class MakeACoffe : MonoBehaviour
 
                 foreach (Transform child in children)
                 {
-                    child.gameObject.SetActive(true);
+                    if (child.gameObject.name == "ZabierzKawkeText")
+                    {
+                        Debug.Log(child.gameObject.name);
+                        child.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        child.gameObject.SetActive(true);
+                    }
                 }
             }
         }
     }
+
+    private void Update()
+    {
+        interactionDistance = (Vector3.Distance(transform.position, playerTransform.position));
+    }
     private void OnMouseDown()
     {
-        WlaczPanel();
+        if (interactionDistance <= 3f)
+        {
+            WlaczPanel();
+        }
     }
 
     public void DodajCukier()
@@ -95,6 +129,22 @@ public class MakeACoffe : MonoBehaviour
         mlekoSlider.value -= 0.2f;
         iloscMleka -= 1;
         Debug.Log(iloscMleka);
+    }
+
+    public void NaWynosAlboNie()
+    {
+        if (naWynosToggle.isOn)
+        {
+            naWynos = true;
+            Debug.Log(naWynos);
+        }
+
+        if (!naWynosToggle.isOn)
+        {
+            naWynos = false;
+            Debug.Log(naWynos);
+        }
+
     }
 
     public void WybierzKawe()
@@ -128,19 +178,61 @@ public class MakeACoffe : MonoBehaviour
             kawkaObject = collider.GetComponent<Kawka>();
             if (kawkaObject != null)
             {
-                Debug.Log("Najpierw zabierz kawê która stoi obok!");
+                StartCoroutine(WyswietlKomuniktat(IstniejeKawkaText));
                 break;
             }
 
             else
             {
                 // There is no Kawka object at the given position
-                ostatnioUtworzonyObiekt = Instantiate(KawkaObject, positionToCheck, Quaternion.identity);
-                ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
-                ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
-                ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;
-                WylaczPanel();
+                if (Kawa == "Latte" && !naWynos)
+                {
+                    ostatnioUtworzonyObiekt = Instantiate(KawkaLatteObject, positionToCheck, Quaternion.identity);
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().naWynos = naWynos;
+                    WylaczPanel();
+                }
+                if (Kawa == "Americano" && !naWynos)
+                {
+                    ostatnioUtworzonyObiekt = Instantiate(KawkaAmericanoObject, positionToCheck, Quaternion.identity);
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().naWynos = naWynos;
+                    WylaczPanel();
+                }
+                if (Kawa == "Mocha" && !naWynos)
+                {
+                    ostatnioUtworzonyObiekt = Instantiate(KawkaMochaObject, positionToCheck, Quaternion.identity);
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().naWynos = naWynos;
+                    WylaczPanel();
+                }
+
+                if (naWynos)
+                {
+                    Quaternion rotation = Quaternion.Euler(-90, 0, 0);
+                    positionToCheck = new Vector3(2.95499992f, 1.58800006f, -4.29699993f);
+                    ostatnioUtworzonyObiekt = Instantiate(NaWynosObject, positionToCheck, rotation);
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().naWynos = naWynos;
+                    WylaczPanel();
+                }
             }
         }
+    }
+
+    IEnumerator WyswietlKomuniktat(TextMeshProUGUI text)
+    {
+        text.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        text.gameObject.SetActive(false);
+
     }
 }
