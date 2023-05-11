@@ -118,7 +118,7 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                 // If there are no free queue points, wait for some time before checking again
                 if (!foundFreeQueuePoint)
                 {
-                    yield return new WaitForSeconds(5f);
+                    yield return new WaitForSeconds(1f);
                 }
             }
 
