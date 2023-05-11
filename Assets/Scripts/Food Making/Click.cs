@@ -51,6 +51,6 @@ public class Click : MonoBehaviour
         }
 
         GameFlow.plateValue += foodValue;
-        Debug.Log(GameFlow.plateValue + " " + GameFlow.orderValue);
+        /*Debug.Log(GameFlow.plateValue + " " + GameFlow.orderValue);*/
     }
 }

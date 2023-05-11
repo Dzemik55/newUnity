@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,7 +10,8 @@ using UnityEngine.UI;
 
 public class CheckAndMoveToFreePoint : MonoBehaviour
 {
-
+    public string playerPlate= "qwertyuiop";
+    public GameObject Tekst;
     public Gradient Gradient=new Gradient();
     public Material Material;
     public GameObject wynik;
@@ -25,18 +27,20 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
     public GameObject currentRegister;
     private int lastCheckedIndex = -1;
     public bool isLeaving = false;
-    public float patienceDuration; // Czas w sekundach
+    public float patienceDuration = 5f; // Czas w sekundach
     public float maxPatienceValue = 100f;
     public float minPatienceValue = 0f;
     public float timeElapsed = 0f;
-    public int ocena = 1;
+    public float ocena = 1;
     public float currentPatienceValue;
+    public int randomIndex;
+    public string randomValue;
+    public string randomKey;
     private void Start()
     {
 
         Material=GetComponentInChildren<MeshRenderer>().material;
         Material.color = Color.green;
-        patienceDuration = 5f;
         wynik = GameObject.Find("wynik");
         currentPatienceValue = maxPatienceValue;
         WaypointsList = GameObject.Find("Queue");
@@ -61,7 +65,18 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
         }
         waypoints.Reverse();
         navMeshAgent = GetComponent<NavMeshAgent>();
-        if(!isLeaving) 
+        //wybieranie jedzenia
+            System.Random random = new System.Random();
+
+            // Generate a random index between 0 and the length of the list
+            randomIndex = random.Next(GameFlow.orderValues.Count);
+
+            // Access the key of the KeyValuePair at the random index
+            randomKey = GameFlow.orderValues[randomIndex].Key;
+            randomValue = GameFlow.orderValues[randomIndex].Value;
+        Debug.Log(randomKey);
+            // Print the randomly selected key to the console
+        if (!isLeaving) 
         {
             StartCoroutine(MoveToFreePoint());
         }
@@ -150,6 +165,10 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
         // Wait for player to look at the agent and press F
         while (true)
         {
+            
+            Tekst.GetComponent<TextMeshPro>().text = randomKey + "+ "+randomValue;
+
+
             if (!isLeaving)
             {
                 lerpValue = currentPatienceValue / 100f; // wartoœæ lerp miêdzy 0 a 1
@@ -178,6 +197,8 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    ocena = sprawdzanieKolejnosc(playerPlate,randomKey)+sprawdzanieSkladniki(playerPlate, randomKey);
+                    Debug.Log(randomValue+" : "+ocena+" = "+ sprawdzanieKolejnosc(playerPlate, randomKey)+" + "+sprawdzanieSkladniki(playerPlate, randomKey));
                     isLeaving = true;
                     break;
                 }
@@ -189,5 +210,64 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
             }
             yield return null;
         }
+    }
+    public float sprawdzanieSkladniki(string playerPlate, string randomKey)
+    {
+        bool wszystkiePoprawne = true;
+        float wynik = 0f;
+
+        int x = Math.Max(playerPlate.Length, randomKey.Length);
+
+        for (int i = 0; i < x; i++)
+        {
+            if (i < playerPlate.Length && i < randomKey.Length && playerPlate[i] == randomKey[i])
+            {
+                wynik += 0.7f / x;
+            }
+            else
+            {
+                wszystkiePoprawne = false;
+            }
+        }
+
+        if (wszystkiePoprawne)
+        {
+            wynik = 0.7f;
+        }
+
+        return wynik;
+    }
+    public float sprawdzanieKolejnosc(string playerPlate, string randomKey)
+    {
+        int i = 0;
+        int j = 0;
+        float wynik = 0f;
+        int len1 = playerPlate.Length;
+        int len2 = randomKey.Length;
+
+        while (i < len1 && j < len2)
+        {
+            if (playerPlate[i] == randomKey[j])
+            {
+                i++;
+                j++;
+            }
+            else
+            {
+                j++;
+            }
+        }
+
+        if (i == len1)
+        {
+            wynik = 0.3f;
+        }
+        else
+        {
+            float dlugoscWieksza = len1 > len2 ? len1 : len2;
+            wynik = 0.3f * (i / dlugoscWieksza);
+        }
+
+        return wynik;
     }
 }
