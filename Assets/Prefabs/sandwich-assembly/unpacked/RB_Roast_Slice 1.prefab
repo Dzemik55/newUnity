@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4762015009271959614}
   - component: {fileID: -6288874190932221194}
   - component: {fileID: 2105821884946061656}
-  m_Layer: 0
+  - component: {fileID: 7543896706146480519}
+  m_Layer: 3
   m_Name: RB_Roast_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5875135698865685345
 MeshFilter:
@@ -125,6 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f620ec0ebbfa4584c9be9c310bf16162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newMaterial: {fileID: 2065782725821938271, guid: 933bee51c394a13418cd92b30249c531, type: 3}
+  burnedMaterial: {fileID: 2100000, guid: 0810acd44cdb78443937edaacec77755, type: 2}
+  newTexture: {fileID: 2800000, guid: c958687b887d0b841bad195d4707051f, type: 3}
+  spawnPosition: {x: 0, y: 0, z: 0}
+  PatelniaNaKtorejLeze: {fileID: 0}
 --- !u!65 &2105821884946061656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -146,3 +152,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.19999999, y: 0.009999998, z: 0.19999999}
   m_Center: {x: 0, y: 0.004999999, z: 0}
+--- !u!114 &7543896706146480519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317814311483160715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

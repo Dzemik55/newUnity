@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7723272640175713783}
   - component: {fileID: -8921988752951494875}
   - component: {fileID: -1213351804373107141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Avocado_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

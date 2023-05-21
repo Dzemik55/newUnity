@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4640832295395166349}
   - component: {fileID: 5208834629151225342}
   - component: {fileID: -184237008424452695}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Pickle_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,18 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class CheckAndMoveToFreePoint : MonoBehaviour
 {
-    public string playerPlate= "qwertyuiop";
+    int index;
+    public string playerPlate = "";
     public GameObject Tekst;
-    public Gradient Gradient=new Gradient();
+    public GameObject Plate;
+    public Gradient Gradient = new Gradient();
     public Material Material;
     public GameObject wynik;
     private float lerpValue;
@@ -36,10 +35,22 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
     public int randomIndex;
     public string randomValue;
     public string randomKey;
+    Click click;
+    Click[] clickObjects;
+    [SerializeField]
+    int pickUpLayerMask;
+    int layerMask;
+    public Image zdjecieBurgera;
+    string nazwaBurgera;
     private void Start()
     {
-
-        Material=GetComponentInChildren<MeshRenderer>().material;
+        patienceDuration = 60f;
+        clickObjects = FindObjectsOfType<Click>();
+        Debug.Log("D³ugoœæ clickObjects:" + clickObjects.Length);
+        click = GameObject.Find("Bulka_dol").GetComponent<Click>();
+        pickUpLayerMask = LayerMask.GetMask("Food");
+        layerMask = ~pickUpLayerMask;
+        Material = GetComponentInChildren<MeshRenderer>().material;
         Material.color = Color.green;
         wynik = GameObject.Find("wynik");
         currentPatienceValue = maxPatienceValue;
@@ -66,25 +77,24 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
         waypoints.Reverse();
         navMeshAgent = GetComponent<NavMeshAgent>();
         //wybieranie jedzenia
-            System.Random random = new System.Random();
+        System.Random random = new System.Random();
 
-            // Generate a random index between 0 and the length of the list
-            randomIndex = random.Next(GameFlow.orderValues.Count);
+        // Generate a random index between 0 and the length of the list
+        randomIndex = random.Next(GameFlow.orderValues.Count);
 
-            // Access the key of the KeyValuePair at the random index
-            randomKey = GameFlow.orderValues[randomIndex].Key;
-            randomValue = GameFlow.orderValues[randomIndex].Value;
+        // Access the key of the KeyValuePair at the random index
+        randomKey = GameFlow.orderValues[randomIndex].Key;
+        randomValue = GameFlow.orderValues[randomIndex].Value;
         Debug.Log(randomKey);
-            // Print the randomly selected key to the console
-        if (!isLeaving) 
+        // Print the randomly selected key to the console
+        if (!isLeaving)
         {
             StartCoroutine(MoveToFreePoint());
         }
-        
+
     }
     void Update()
     {
-        
     }
     private IEnumerator MoveToFreePoint()
     {
@@ -153,7 +163,9 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                 // Reset the current register and disable the agent
                 isActive = false;
                 isLeaving = false;
-                punkty.score +=(ocena * currentPatienceValue);
+                punkty.score += (ocena * currentPatienceValue);
+                punkty.efficency = (punkty.score / GameFlow.CustomerCount);
+                Debug.Log("Customers count: " + GameFlow.CustomerCount + ", Punkty: " + punkty.score + ", Efficency: " + punkty.efficency);
                 Destroy(gameObject);
             }
         }
@@ -165,8 +177,27 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
         // Wait for player to look at the agent and press F
         while (true)
         {
-            
-            Tekst.GetComponent<TextMeshPro>().text = randomKey + "+ "+randomValue;
+
+
+            // Tekst.GetComponent<TextMeshPro>().text = randomKey + "+ " + randomValue;
+            if (randomValue == "Super Meaty")
+            {
+                nazwaBurgera = "super_meaty";
+            }
+            if (randomValue == "Very Vegetable")
+            {
+                nazwaBurgera = "vegetable";
+            }
+            if (randomValue == "What?")
+            {
+                nazwaBurgera = "what";
+            }
+            if (randomValue == "Double Burger")
+            {
+                nazwaBurgera = "double";
+            }
+            zdjecieBurgera.sprite = Resources.Load<Sprite>(nazwaBurgera);
+            zdjecieBurgera.enabled = true;
 
 
             if (!isLeaving)
@@ -176,31 +207,68 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                 timeElapsed += Time.deltaTime;
                 if (timeElapsed > patienceDuration)
                 {
-                    currentPatienceValue = Mathf.Lerp(maxPatienceValue, minPatienceValue, Mathf.InverseLerp(0f, patienceDuration, timeElapsed- patienceDuration));
+                    currentPatienceValue = Mathf.Lerp(maxPatienceValue, minPatienceValue, Mathf.InverseLerp(0f, patienceDuration, timeElapsed - patienceDuration));
                 }
                 else
                 {
                     currentPatienceValue = 100;
                 }
             }
-            if(currentPatienceValue==0)
+            if (currentPatienceValue == 0)
             {
                 isLeaving = true;
+                GameFlow.CustomerCount++;
                 break;
             }
             // Check if the player is looking at the agent
             Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(cameraRay, out hit) && hit.collider.gameObject == gameObject)
+            if (Physics.Raycast(cameraRay, out hit, float.PositiveInfinity, layerMask) && hit.collider.gameObject == gameObject)
             {
                 // Player is looking at the agent, wait for F key press
-                
+
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    ocena = sprawdzanieKolejnosc(playerPlate,randomKey)+sprawdzanieSkladniki(playerPlate, randomKey);
-                    Debug.Log(randomValue+" : "+ocena+" = "+ sprawdzanieKolejnosc(playerPlate, randomKey)+" + "+sprawdzanieSkladniki(playerPlate, randomKey));
-                    isLeaving = true;
-                    break;
+
+                    playerPlate = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersPlate;
+                    if (String.IsNullOrEmpty(playerPlate))
+                    {
+                        Debug.Log("playerPlate: " + playerPlate);
+                    }
+                    else
+                    {
+                        Debug.Log("Gracz ma takie jedzonko ze sob¹: " + playerPlate);
+                        ocena = sprawdzanieKolejnosc(playerPlate, randomKey) + sprawdzanieSkladniki(playerPlate, randomKey);
+                        bool containsLetters = playerPlate.Contains("A") || playerPlate.Contains("k") || playerPlate.Contains("S");
+                        if (containsLetters)
+                        {
+                            float zabranePunkty = ocena * 0.1f;
+                            float nowePunkty = ocena * 0.9f;
+                            ocena = nowePunkty;
+                            Debug.Log("Zabrano tyle punktów: " + zabranePunkty);
+                        }
+                        else { }
+                        Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieKolejnosc(playerPlate, randomKey) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
+                        isLeaving = true;
+                        GameFlow.CustomerCount++;
+                        if (PickUp.currentObject != null)
+                            PickUp.currentObject.GetComponent<PickUp>().isPickedUp = false;
+
+                        if (PickUp.currentObject != null)
+                        {
+                            index = Array.IndexOf(click.plateObjects, PickUp.currentObject);
+
+                            Destroy(PickUp.currentObject);
+                        }
+                        GameObject newObject = Instantiate(Plate, click.objectTransforms[index].position, click.objectTransforms[index].rotation);
+                        foreach (Click clickObject in clickObjects)
+                        {
+                            clickObject.plateObjects[index] = newObject;
+                            clickObject.plateObjects[clickObject.currentPlateIndex].GetComponent<Outline>().enabled = true;
+                        }
+                        zdjecieBurgera.enabled = false;
+                        break;
+                    }
                 }
             }
             else
@@ -270,4 +338,5 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
 
         return wynik;
     }
+
 }

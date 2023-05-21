@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 8945916455644392891}
   - component: {fileID: -3773300487002545580}
   - component: {fileID: 5664197662083673856}
-  m_Layer: 0
+  - component: {fileID: -3117983649224134382}
+  - component: {fileID: -6845254909964049389}
+  m_Layer: 3
   m_Name: RB_Bacon_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +135,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17849793, y: 0.01, z: 0.1962281}
   m_Center: {x: 0, y: -0.005, z: -0.000000037252903}
+--- !u!114 &-3117983649224134382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218160687053406634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6845254909964049389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218160687053406634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f620ec0ebbfa4584c9be9c310bf16162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterial: {fileID: 2100000, guid: dd12faedc05d62941b676e4838b84e68, type: 2}
+  burnedMaterial: {fileID: 2100000, guid: 7f577c431cb195049921f8801d9bb722, type: 2}
+  newTexture: {fileID: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
+  PatelniaNaKtorejLeze: {fileID: 0}

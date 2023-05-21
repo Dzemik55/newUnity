@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4273023679361023829}
   - component: {fileID: -8844184954769923241}
   - component: {fileID: 2898620635784920301}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Shrimp_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

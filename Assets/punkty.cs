@@ -1,8 +1,9 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class punkty : MonoBehaviour
 {
+    public static float efficency = 0;
     public static float score = 0;
     private TMP_Text text;
 

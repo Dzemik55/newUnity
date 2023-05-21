@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 1389659010126757068}
   - component: {fileID: 4378114217412138548}
   - component: {fileID: 1528660111607079688}
-  m_Layer: 0
+  - component: {fileID: -6815398484025548308}
+  - component: {fileID: 1347148006413914096}
+  m_Layer: 3
   m_Name: RB_Sausage_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +135,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15693328, y: 0.01, z: 0.15265778}
   m_Center: {x: -0.001149442, y: -4.656613e-10, z: -0.005932465}
+--- !u!114 &-6815398484025548308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512528158862737306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1347148006413914096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512528158862737306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f620ec0ebbfa4584c9be9c310bf16162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterial: {fileID: 2100000, guid: e0398d1da7129384eb54b8de841ddd48, type: 2}
+  burnedMaterial: {fileID: 2100000, guid: c748ef0eb861dde42aa81108aab88a69, type: 2}
+  newTexture: {fileID: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
+  PatelniaNaKtorejLeze: {fileID: 0}

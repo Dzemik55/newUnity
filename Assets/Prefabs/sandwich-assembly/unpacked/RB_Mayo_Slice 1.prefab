@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4390266024601109869}
   - component: {fileID: -8594713071418930683}
   - component: {fileID: -8753887195683090930}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Mayo_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
