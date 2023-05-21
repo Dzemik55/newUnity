@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 126048175226867047}
   - component: {fileID: -346136145801993564}
   - component: {fileID: 8129505253997048645}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Bread_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

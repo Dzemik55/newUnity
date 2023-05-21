@@ -11,13 +11,12 @@ GameObject:
   - component: {fileID: 6953365332519814155}
   - component: {fileID: 534901545924717538}
   - component: {fileID: 6358864396760179711}
-  - component: {fileID: 6641886593676779116}
   - component: {fileID: 7576540536387566210}
   - component: {fileID: -8825593917098747785}
-  - component: {fileID: -8252708405894547632}
-  m_Layer: 0
+  - component: {fileID: -329221679465657557}
+  m_Layer: 3
   m_Name: Bulka_dol_RB
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6641886593676779116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6514044457687762391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445e942eaa45e2946ac6a4969bd8e2b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cloneObj: {fileID: 0}
-  foodValue: 0
 --- !u!64 &7576540536387566210
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -150,7 +135,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-8252708405894547632
+--- !u!114 &-329221679465657557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,6 +144,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6514044457687762391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f954c4511b21d4849ad14b9af14a1ab0, type: 3}
+  m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

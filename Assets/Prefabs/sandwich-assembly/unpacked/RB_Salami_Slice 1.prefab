@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5436645101462302401}
   - component: {fileID: 6846592584071895952}
   - component: {fileID: 1985704246888812172}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Salami_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

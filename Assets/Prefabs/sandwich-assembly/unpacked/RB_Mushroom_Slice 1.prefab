@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1195572145418548826}
   - component: {fileID: -4317552768762249347}
   - component: {fileID: -4038039619365413173}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Mushroom_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

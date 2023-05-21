@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1422931953095776091}
   - component: {fileID: 5735809373023130153}
   - component: {fileID: -4402137773716213454}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Salmon_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

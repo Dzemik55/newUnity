@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2733957685303647458}
   - component: {fileID: 5315204066658029628}
   - component: {fileID: 8912995091511271385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RB_Waffle_Slice 1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

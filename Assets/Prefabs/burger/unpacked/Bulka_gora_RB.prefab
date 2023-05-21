@@ -3497,13 +3497,12 @@ GameObject:
   - component: {fileID: 1682072580468288133}
   - component: {fileID: 197146637726468264}
   - component: {fileID: 4919065941698597177}
-  - component: {fileID: 3766623775711839110}
   - component: {fileID: 2126209082064866285}
   - component: {fileID: -7282522449930091006}
-  - component: {fileID: -5380208170707332282}
-  m_Layer: 0
+  - component: {fileID: -1731254645179780123}
+  m_Layer: 3
   m_Name: Bulka_gora_RB
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3623,20 +3622,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3766623775711839110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6280864748358841144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445e942eaa45e2946ac6a4969bd8e2b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cloneObj: {fileID: 0}
-  foodValue: 0
 --- !u!64 &2126209082064866285
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3686,7 +3671,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-5380208170707332282
+--- !u!114 &-1731254645179780123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3695,7 +3680,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6280864748358841144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f954c4511b21d4849ad14b9af14a1ab0, type: 3}
+  m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6569697186212017531

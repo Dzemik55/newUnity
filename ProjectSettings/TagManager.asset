@@ -3,12 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ingredient
+  - Plate
+  - Patelnia
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Food
   - Water
   - UI
   - 
