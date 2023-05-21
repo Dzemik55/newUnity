@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3241593590700537803}
   - component: {fileID: 6026855775555688955}
   - component: {fileID: 850619454438003213}
+  - component: {fileID: 4083099803235093502}
   m_Layer: 3
   m_Name: RB_Chicken_Slice 1
   m_TagString: Ingredient
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16908325, y: 0.009999999, z: 0.19245839}
   m_Center: {x: 0, y: 0.0049999994, z: -0.0014718436}
+--- !u!114 &4083099803235093502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9048072468845430971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

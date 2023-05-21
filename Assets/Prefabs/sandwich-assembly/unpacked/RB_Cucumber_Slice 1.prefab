@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -3043613212202082916}
   - component: {fileID: -2498400502776048539}
   - component: {fileID: -4305662989762417395}
+  - component: {fileID: -4807534114388770770}
   m_Layer: 3
   m_Name: RB_Cucumber_Slice 1
   m_TagString: Ingredient
@@ -144,5 +145,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4807534114388770770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683596802858263543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

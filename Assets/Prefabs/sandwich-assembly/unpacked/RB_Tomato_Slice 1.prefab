@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8003631611089300458}
   - component: {fileID: -2890462274132693354}
   - component: {fileID: 6910831020277018840}
+  - component: {fileID: 7962473200108099238}
   m_Layer: 3
   m_Name: RB_Tomato_Slice 1
   m_TagString: Ingredient
@@ -144,5 +145,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7962473200108099238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449324217535227036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

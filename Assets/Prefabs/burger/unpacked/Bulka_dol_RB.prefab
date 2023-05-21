@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7576540536387566210}
   - component: {fileID: -8825593917098747785}
   - component: {fileID: -329221679465657557}
+  - component: {fileID: -7951349300149049842}
   m_Layer: 3
   m_Name: Bulka_dol_RB
   m_TagString: Ingredient
@@ -145,5 +146,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7951349300149049842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514044457687762391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

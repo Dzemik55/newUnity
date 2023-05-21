@@ -3500,6 +3500,7 @@ GameObject:
   - component: {fileID: 2126209082064866285}
   - component: {fileID: -7282522449930091006}
   - component: {fileID: -1731254645179780123}
+  - component: {fileID: 6183160544756291391}
   m_Layer: 3
   m_Name: Bulka_gora_RB
   m_TagString: Ingredient
@@ -3681,6 +3682,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6183160544756291391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280864748358841144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6569697186212017531

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1800933154810305950}
   - component: {fileID: -7257981532515055720}
   - component: {fileID: 844045865776017390}
+  - component: {fileID: 7964927974914459056}
   m_Layer: 3
   m_Name: RB_BBQ_Sauce_Slice 1
   m_TagString: Ingredient
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17059448, y: 0.01, z: 0.17000005}
   m_Center: {x: 0, y: 0.005, z: -0.000000018626451}
+--- !u!114 &7964927974914459056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311679178580060165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

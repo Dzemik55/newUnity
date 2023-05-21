@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1528660111607079688}
   - component: {fileID: -6815398484025548308}
   - component: {fileID: 1347148006413914096}
+  - component: {fileID: 7738562619932150702}
   m_Layer: 3
   m_Name: RB_Sausage_Slice 1
   m_TagString: Ingredient
@@ -164,3 +165,15 @@ MonoBehaviour:
   newTexture: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
   PatelniaNaKtorejLeze: {fileID: 0}
+--- !u!114 &7738562619932150702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512528158862737306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

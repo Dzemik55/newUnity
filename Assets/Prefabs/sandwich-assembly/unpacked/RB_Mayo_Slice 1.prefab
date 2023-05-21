@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4390266024601109869}
   - component: {fileID: -8594713071418930683}
   - component: {fileID: -8753887195683090930}
+  - component: {fileID: -4717201995954138040}
   m_Layer: 3
   m_Name: RB_Mayo_Slice 1
   m_TagString: Ingredient
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17, y: 0.01, z: 0.1705943}
   m_Center: {x: 0, y: 0.005, z: -0.0000000037252903}
+--- !u!114 &-4717201995954138040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747996227788395499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

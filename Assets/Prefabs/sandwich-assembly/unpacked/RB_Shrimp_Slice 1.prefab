@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4273023679361023829}
   - component: {fileID: -8844184954769923241}
   - component: {fileID: 2898620635784920301}
+  - component: {fileID: 5196049684389340560}
   m_Layer: 3
   m_Name: RB_Shrimp_Slice 1
   m_TagString: Ingredient
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18141752, y: 0.010002414, z: 0.1733725}
   m_Center: {x: -0.0000001527369, y: 0.004998792, z: -0.010971528}
+--- !u!114 &5196049684389340560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44152587292415404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3203784830716554376}
   - component: {fileID: 2616193035207269120}
   - component: {fileID: 8926245897000643573}
+  - component: {fileID: 1108375742492813062}
   m_Layer: 3
   m_Name: RB_Halloumi_Slice 1
   m_TagString: Ingredient
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18149993, y: 0.01, z: 0.15894787}
   m_Center: {x: 0, y: 0.005, z: 0}
+--- !u!114 &1108375742492813062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289158571947414914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

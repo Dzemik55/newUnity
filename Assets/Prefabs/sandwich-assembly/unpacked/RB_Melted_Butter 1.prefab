@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5138981379785697667}
   - component: {fileID: -1417222571884132773}
   - component: {fileID: 7983408668231141290}
+  - component: {fileID: -7880940805438685477}
   m_Layer: 3
   m_Name: RB_Melted_Butter 1
   m_TagString: Ingredient
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16177185, y: 0.01, z: 0.16124296}
   m_Center: {x: -0.009290464, y: 0.005, z: -0.00044853613}
+--- !u!114 &-7880940805438685477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234608727757169654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

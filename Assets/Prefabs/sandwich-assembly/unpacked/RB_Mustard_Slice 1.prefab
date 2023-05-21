@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8291919082741915084}
   - component: {fileID: 3875448742450255755}
   - component: {fileID: -6685720136248029322}
+  - component: {fileID: 6810431967656640939}
   m_Layer: 3
   m_Name: RB_Mustard_Slice 1
   m_TagString: Ingredient
@@ -144,5 +145,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e66cd28b5ee1d1b468824c0b07fcfb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6810431967656640939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6227308546355992951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

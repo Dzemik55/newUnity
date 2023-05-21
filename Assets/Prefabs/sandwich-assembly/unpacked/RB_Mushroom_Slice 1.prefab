@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1195572145418548826}
   - component: {fileID: -4317552768762249347}
   - component: {fileID: -4038039619365413173}
+  - component: {fileID: -7576159157311374128}
   m_Layer: 3
   m_Name: RB_Mushroom_Slice 1
   m_TagString: Ingredient
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15793517, y: 0.010150276, z: 0.15597764}
   m_Center: {x: -0.0007037334, y: 0.004999999, z: -0.000053141266}
+--- !u!114 &-7576159157311374128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69646991174637359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829f5283d7f5124faa9a57cb2aa4cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

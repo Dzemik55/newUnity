@@ -3,7 +3,6 @@ using UnityEngine;
 public class Click : MonoBehaviour
 {
     public Transform cloneObj;
-    private GameObject patelnia;
     public int foodValue;
     public GameObject[] plateObjects;
     public static GameObject[] patelniaObjects;
@@ -17,6 +16,7 @@ public class Click : MonoBehaviour
     public Vector3 spawnPosition = new Vector3(0f, 0f, 0f);
     GameObject spawnedObject;
     public string ingredientLetter;
+    private GameObject hoveredObject;
 
     private void Awake()
     {
@@ -70,8 +70,8 @@ public class Click : MonoBehaviour
             spawnedObject.transform.parent = plateObjects[currentPlateIndex].transform;
             plateObjects[currentPlateIndex].GetComponent<Plate>().plateLetters = plateObjects[currentPlateIndex].GetComponent<Plate>().plateLetters + ingredientLetter;
             Debug.Log("Spawn position = " + spawnPosition + ", spawnHeight = " + plateObjects[currentPlateIndex].GetComponent<Plate>().spawnHeight);
+            spawnedObject.GetComponent<PlacedIngredient>().enabled = true;
         }
-
     }
 
     private void Update()
@@ -85,6 +85,10 @@ public class Click : MonoBehaviour
         {
             SwitchPatelnia();
         }
+
+
+
+
     }
 
     private void Start()
@@ -92,12 +96,9 @@ public class Click : MonoBehaviour
         patelniaObjects = GameObject.FindGameObjectsWithTag("Patelnia");
         Debug.Log("Iloœæ patelni: " + patelniaObjects.Length);
         gameObject.GetComponent<Outline>().enabled = false;
-        patelnia = GameObject.Find("pan_3_2");
         plateObjects[currentPlateIndex].GetComponent<Outline>().enabled = true;
         patelniaObjects[currentPatelniaIndex].GetComponent<Outline>().enabled = true;
         Invoke("DelayedStart", 2f);
-
-
     }
 
     private void DelayedStart()
@@ -122,11 +123,6 @@ public class Click : MonoBehaviour
             currentPlateIndex = 0;
         }
         plateObjects[currentPlateIndex].GetComponent<Outline>().enabled = true;
-        // spawnHeight = plateObjects[currentPlateIndex].GetComponent<Plate>().spawnHeight;
-        // Debug.Log("Spawn height of this plate " + currentPlateIndex + ": " + spawnHeight);
-
-        // Optionally, you can provide visual feedback to the player indicating the active plate object.
-        // For example, you can highlight the active plate object or display a UI indicator.
     }
 
     private void SwitchPatelnia()
@@ -138,22 +134,23 @@ public class Click : MonoBehaviour
             currentPatelniaIndex = 0;
         }
         patelniaObjects[currentPatelniaIndex].GetComponent<Outline>().enabled = true;
-        // spawnHeight = plateObjects[currentPlateIndex].GetComponent<Plate>().spawnHeight;
-        // Debug.Log("Spawn height of this plate " + currentPlateIndex + ": " + spawnHeight);
-
-        // Optionally, you can provide visual feedback to the player indicating the active plate object.
-        // For example, you can highlight the active plate object or display a UI indicator.
     }
 
     private void OnMouseOver()
     {
+
         gameObject.GetComponent<Outline>().enabled = true;
+
+
     }
 
     private void OnMouseExit()
     {
+
         gameObject.GetComponent<Outline>().enabled = false;
+
     }
+
     public struct TransformData
     {
         public Vector3 position;
@@ -165,4 +162,23 @@ public class Click : MonoBehaviour
             this.rotation = rotation;
         }
     }
+
+    private void DeleteIngredients(GameObject plateObject)
+    {
+        // Check if the plate object exists and has ingredients
+        Plate plate = plateObject.GetComponent<Plate>();
+        if (plate != null && plate.plateLetters.Length > 0)
+        {
+            // Destroy all the ingredient objects on the plate
+            foreach (Transform child in plateObject.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            // Reset the plate's spawn height and plate letters
+            plate.spawnHeight = 0f;
+            plate.plateLetters = string.Empty;
+        }
+    }
+
 }

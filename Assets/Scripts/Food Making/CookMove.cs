@@ -46,6 +46,7 @@ public class CookMove : MonoBehaviour
         spawnPosition += Vector3.up * click.plateObjects[click.currentPlateIndex].GetComponent<Plate>().spawnHeight;
         GetComponent<Transform>().position = spawnPosition;
         GetComponent<Transform>().transform.parent = click.plateObjects[click.currentPlateIndex].transform;
+        gameObject.GetComponent<PlacedIngredient>().enabled = true;
         if (isReady && !isBurned)
         {
             if (gameObject.name.Contains("Bacon"))

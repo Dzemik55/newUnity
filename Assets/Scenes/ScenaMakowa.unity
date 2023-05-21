@@ -2516,9 +2516,9 @@ MonoBehaviour:
   - {fileID: 1360288618}
   currentPlateIndex: 0
   currentPatelniaIndex: 0
-  spawnHeightOffset: 0.01
+  spawnHeightOffset: 0
   spawnPosition: {x: 0, y: 0, z: 0}
-  ingredientLetter: C
+  ingredientLetter: 
 --- !u!114 &397751480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4970,7 +4970,7 @@ RectTransform:
   m_GameObject: {fileID: 582116768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16414241, y: 0.061940525, z: 0.061940525}
+  m_LocalScale: {x: 0.0052553704, y: 0.00933251, z: 0.00933251}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 430098000}
@@ -4979,7 +4979,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1212, y: -504}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582116770
 MonoBehaviour:
@@ -21182,9 +21182,9 @@ MonoBehaviour:
   - {fileID: 1360288618}
   currentPlateIndex: 0
   currentPatelniaIndex: 0
-  spawnHeightOffset: 0.01
+  spawnHeightOffset: 0
   spawnPosition: {x: 0, y: 0, z: 0}
-  ingredientLetter: x
+  ingredientLetter: 
 --- !u!114 &7386409804361717677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21271,9 +21271,9 @@ MonoBehaviour:
   - {fileID: 1360288618}
   currentPlateIndex: 0
   currentPatelniaIndex: 0
-  spawnHeightOffset: 0.01
+  spawnHeightOffset: 0
   spawnPosition: {x: 0, y: 0, z: 0}
-  ingredientLetter: X
+  ingredientLetter: 
 --- !u!114 &9185615752850910543
 MonoBehaviour:
   m_ObjectHideFlags: 0
