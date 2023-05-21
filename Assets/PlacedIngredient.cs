@@ -29,7 +29,7 @@ public class PlacedIngredient : MonoBehaviour
 
             // Reset the plate's spawn height and plate letters
             plate.spawnHeight = 0f;
-            plate.plateLetters = string.Empty;
+            plate.plateLetters = "";
         }
     }
 }
