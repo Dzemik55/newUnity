@@ -9,6 +9,7 @@ public class GameFlow : MonoBehaviour
     public static int CustomerCount = 0;
     public GameObject Customers;
     public GameObject spawn;
+    private Vector3 spawnPoint;
     private bool isSpawning = false;
     public static int plateValue = 00000;
     public static List<KeyValuePair<string, string>> orderValues = new List<KeyValuePair<string, string>>
@@ -25,7 +26,7 @@ public class GameFlow : MonoBehaviour
         //
         Customers = GameObject.Find("Customers");
         // Create a new instance of the Random class
-
+        spawnPoint = GameObject.Find("Spawn").transform.position;
 
     }
 
@@ -68,7 +69,7 @@ public class GameFlow : MonoBehaviour
             spawningRange = Random.Range(20.0f, 30.0f);
         }
         yield return new WaitForSeconds(spawningRange);
-        GameObject spawned = Instantiate(spawn, new Vector3(-3.759f, 0, -23.27f), Quaternion.identity);
+        GameObject spawned = Instantiate(spawn, spawnPoint, Quaternion.identity);
         spawned.name = spawned.name + Customers.transform.childCount + 1;
         spawned.transform.SetParent(Customers.transform);
         Debug.Log("Spawning Range: " + spawningRange + ", Efficency: " + punkty.efficency);
