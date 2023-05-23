@@ -247,7 +247,6 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                             ocena = nowePunkty;
                             Debug.Log("Zabrano tyle punktów: " + zabranePunkty);
                         }
-                        else { }
                         Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieKolejnosc(playerPlate, randomKey) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
                         isLeaving = true;
                         GameFlow.CustomerCount++;
