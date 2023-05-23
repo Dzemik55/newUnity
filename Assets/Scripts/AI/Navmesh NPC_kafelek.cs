@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class CheckAndMoveToFreePoint : MonoBehaviour
+public class Navmesh_kafelek : MonoBehaviour
 {
     int index;
     public string playerPlate = "";
@@ -45,11 +45,11 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
     private void Start()
     {
         patienceDuration = 60f;
-        clickObjects = FindObjectsOfType<Click>();
+        /*clickObjects = FindObjectsOfType<Click>();
         Debug.Log("D³ugoœæ clickObjects:" + clickObjects.Length);
         click = GameObject.Find("Bulka_dol").GetComponent<Click>();
         pickUpLayerMask = LayerMask.GetMask("Food");
-        layerMask = ~pickUpLayerMask;
+        layerMask = ~pickUpLayerMask;*/
         Material = GetComponentInChildren<MeshRenderer>().material;
         Material.color = Color.green;
         wynik = GameObject.Find("wynik");
@@ -196,8 +196,8 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
             {
                 nazwaBurgera = "double";
             }
-            zdjecieBurgera.sprite = Resources.Load<Sprite>(nazwaBurgera);
-            zdjecieBurgera.enabled = true;
+            /*zdjecieBurgera.sprite = Resources.Load<Sprite>(nazwaBurgera);
+            zdjecieBurgera.enabled = true;*/
 
 
             if (!isLeaving)
@@ -247,7 +247,6 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                             ocena = nowePunkty;
                             Debug.Log("Zabrano tyle punktów: " + zabranePunkty);
                         }
-                        else { }
                         Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieKolejnosc(playerPlate, randomKey) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
                         isLeaving = true;
                         GameFlow.CustomerCount++;

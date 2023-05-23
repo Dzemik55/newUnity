@@ -720,8 +720,9 @@ GameObject:
   - component: {fileID: 7119208572196781961}
   - component: {fileID: 8697160150702620702}
   - component: {fileID: -1780992666367190285}
+  - component: {fileID: 5571448171714539191}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: NPC Mak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -896,6 +897,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7119208572196781962}
   m_CullTransparentMesh: 1
+--- !u!114 &5571448171714539191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119208572196781962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a80f821560bb4846ac14d104db663f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPlate: 
+  Tekst: {fileID: 0}
+  Plate: {fileID: 0}
+  Gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  Material: {fileID: 0}
+  wynik: {fileID: 0}
+  WaypointsList: {fileID: 0}
+  RegistersList: {fileID: 0}
+  ExitList: {fileID: 0}
+  isActive: 1
+  exitPoints: []
+  registers: []
+  waypoints: []
+  currentRegister: {fileID: 0}
+  isLeaving: 0
+  patienceDuration: 5
+  maxPatienceValue: 100
+  minPatienceValue: 0
+  timeElapsed: 0
+  ocena: 1
+  currentPatienceValue: 0
+  randomIndex: 0
+  randomValue: 
+  randomKey: 
+  pickUpLayerMask: 0
+  zdjecieBurgera: {fileID: 0}
 --- !u!1 &7119851264049462304
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenaMakowa.unity
     guid: 558cec99557b55a4fb045b4140489424
+  - enabled: 1
+    path: Assets/Scenes/Kafelek.unity
+    guid: 2053bd4916d2e5145b402c05b9f31cac
   m_configObjects: {}
