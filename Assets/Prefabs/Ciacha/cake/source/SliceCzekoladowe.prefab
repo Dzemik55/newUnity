@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8889583037097268198}
   - component: {fileID: 3325126666395236750}
   - component: {fileID: -1201749667853385628}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SliceCzekoladowe
   m_TagString: Ingredient
   m_Icon: {fileID: 0}

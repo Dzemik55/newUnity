@@ -2,17 +2,32 @@ using UnityEngine;
 
 public class NakladanieCiasta : MonoBehaviour
 {
-    public static GameObject[] plateObjects;
+    public GameObject[] plateObjects;
     public int currentPlateIndex = 0;
     public Vector3 spawnPosition;
     public static float initialSpawnHeight = 0.1f;
     public string literkaCiasta = "";
+    public TransformData[] objectTransforms;
+    RespawnCake cake;
 
     private void Start()
     {
         plateObjects = GameObject.FindGameObjectsWithTag("Plate");
         plateObjects[currentPlateIndex].GetComponent<Outline>().enabled = true;
-        Debug.Log(plateObjects.Length);
+        Invoke("DelayedStart", 2f);
+    }
+
+    private void DelayedStart()
+    {
+        objectTransforms = new TransformData[plateObjects.Length];
+
+        // Iterate over the plateObjects array
+        for (int i = 0; i < plateObjects.Length; i++)
+        {
+            GameObject obj = plateObjects[i];
+            TransformData transformData = new TransformData(obj.transform.position, obj.transform.rotation);
+            objectTransforms[i] = transformData;
+        }
     }
     private void OnMouseEnter()
     {
@@ -34,14 +49,18 @@ public class NakladanieCiasta : MonoBehaviour
             }
 
             GameObject currentPlate = plateObjects[currentPlateIndex];
-            int objectCountOnPlate = currentPlate.transform.childCount;
-
-            // Check if the plate already has an object
-            if (objectCountOnPlate > 0)
+            if (currentPlate.transform.childCount > 0)
             {
-                Debug.LogWarning("There is already an object on the plate.");
-                return;
+                int objectCountOnPlate = currentPlate.transform.childCount;
+
+                // Check if the plate already has an object
+                if (objectCountOnPlate > 0)
+                {
+                    Debug.LogWarning("There is already an object on the plate.");
+                    return;
+                }
             }
+
 
             spawnPosition = currentPlate.transform.position;
 
@@ -92,4 +111,16 @@ public class NakladanieCiasta : MonoBehaviour
     }
 
 
+
+    public struct TransformData
+    {
+        public Vector3 position;
+        public Quaternion rotation;
+
+        public TransformData(Vector3 position, Quaternion rotation)
+        {
+            this.position = position;
+            this.rotation = rotation;
+        }
+    }
 }

@@ -46,8 +46,6 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
     {
         patienceDuration = 60f;
         clickObjects = FindObjectsOfType<Click>();
-        Debug.Log("D³ugoœæ clickObjects:" + clickObjects.Length);
-        click = GameObject.Find("Bulka_dol").GetComponent<Click>();
         pickUpLayerMask = LayerMask.GetMask("Food");
         layerMask = ~pickUpLayerMask;
         Material = GetComponentInChildren<MeshRenderer>().material;

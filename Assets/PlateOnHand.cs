@@ -7,7 +7,7 @@ public class PlateOnHand : MonoBehaviour
     private void Update()
     {
 
-        if (PickUp.currentObject != null)
+        if (PickUp.currentObject != null && PickUp.currentObject.tag == "Plate")
         {
             playersPlate = PickUp.currentObject.GetComponent<Plate>().plateLetters;
         }

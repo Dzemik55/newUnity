@@ -20,6 +20,12 @@ public class GameFlow : MonoBehaviour
     new KeyValuePair<string, string>("brPOliqeB", "What?")
 };
 
+    public static List<KeyValuePair<string, string>> KafelekOrderValues = new List<KeyValuePair<string, string>>
+{
+    new KeyValuePair<string, string>("C", "Ciasto czekoladowe"),
+};
+
+
 
     void Start()
     {

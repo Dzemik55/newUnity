@@ -35,8 +35,8 @@ public class Navmesh_kafelek : MonoBehaviour
     public int randomIndex;
     public string randomValue;
     public string randomKey;
-    Click click;
-    Click[] clickObjects;
+    NakladanieCiasta click;
+    NakladanieCiasta[] clickObjects;
     [SerializeField]
     int pickUpLayerMask;
     int layerMask;
@@ -45,11 +45,12 @@ public class Navmesh_kafelek : MonoBehaviour
     private void Start()
     {
         patienceDuration = 60f;
-        /*clickObjects = FindObjectsOfType<Click>();
-        Debug.Log("D³ugoœæ clickObjects:" + clickObjects.Length);
-        click = GameObject.Find("Bulka_dol").GetComponent<Click>();
+        clickObjects = FindObjectsOfType<NakladanieCiasta>();
+        click = GameObject.FindObjectOfType<NakladanieCiasta>();
+        Debug.Log(click.name);
+
         pickUpLayerMask = LayerMask.GetMask("Food");
-        layerMask = ~pickUpLayerMask;*/
+        layerMask = ~pickUpLayerMask;
         Material = GetComponentInChildren<MeshRenderer>().material;
         Material.color = Color.green;
         wynik = GameObject.Find("wynik");
@@ -80,11 +81,11 @@ public class Navmesh_kafelek : MonoBehaviour
         System.Random random = new System.Random();
 
         // Generate a random index between 0 and the length of the list
-        randomIndex = random.Next(GameFlow.orderValues.Count);
+        randomIndex = random.Next(GameFlow.KafelekOrderValues.Count);
 
         // Access the key of the KeyValuePair at the random index
-        randomKey = GameFlow.orderValues[randomIndex].Key;
-        randomValue = GameFlow.orderValues[randomIndex].Value;
+        randomKey = GameFlow.KafelekOrderValues[randomIndex].Key;
+        randomValue = GameFlow.KafelekOrderValues[randomIndex].Value;
         Debug.Log(randomKey);
         // Print the randomly selected key to the console
         if (!isLeaving)
@@ -260,10 +261,10 @@ public class Navmesh_kafelek : MonoBehaviour
                             Destroy(PickUp.currentObject);
                         }
                         GameObject newObject = Instantiate(Plate, click.objectTransforms[index].position, click.objectTransforms[index].rotation);
-                        foreach (Click clickObject in clickObjects)
+                        foreach (NakladanieCiasta clickObject in clickObjects)
                         {
                             clickObject.plateObjects[index] = newObject;
-                            clickObject.plateObjects[clickObject.currentPlateIndex].GetComponent<Outline>().enabled = true;
+                            clickObject.plateObjects[index].GetComponent<Outline>().enabled = true;
                         }
                         zdjecieBurgera.enabled = false;
                         break;

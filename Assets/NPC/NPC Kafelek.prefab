@@ -843,7 +843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPlate: 
   Tekst: {fileID: 0}
-  Plate: {fileID: 0}
+  Plate: {fileID: 1199257847282564, guid: 5c25fbb7b2a978d4a97d97cb90ac8887, type: 3}
   Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -895,7 +895,7 @@ MonoBehaviour:
   randomValue: 
   randomKey: 
   pickUpLayerMask: 0
-  zdjecieBurgera: {fileID: 0}
+  zdjecieBurgera: {fileID: 5583867036060516905}
 --- !u!1 &7119851264049462304
 GameObject:
   m_ObjectHideFlags: 0

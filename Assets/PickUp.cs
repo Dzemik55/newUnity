@@ -44,6 +44,7 @@ public class PickUp : MonoBehaviour
                         }
                         // Disable the object's physics while it's picked up
                         GetComponent<Rigidbody>().isKinematic = true;
+                        Debug.Log("Current Object:" + currentObject.name);
                     }
                 }
             }
@@ -57,6 +58,15 @@ public class PickUp : MonoBehaviour
 
                 GetComponent<Rigidbody>().isKinematic = false;
                 Invoke("DestroyRigidbody", 0.5f);
+                if (currentObject != null)
+                {
+
+                    Debug.Log("Current Object:" + currentObject.name);
+                }
+                else
+                {
+                    Debug.Log("No item is picked up right now");
+                }
             }
         }
 
