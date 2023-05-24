@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90544efefeadf84385b3d600d24a98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPlateIndex: 0
   spawnPosition: {x: 0, y: 0, z: 0}
   literkaCiasta: C
+  plates: {fileID: 0}
 --- !u!64 &-1201749667853385628
 MeshCollider:
   m_ObjectHideFlags: 0

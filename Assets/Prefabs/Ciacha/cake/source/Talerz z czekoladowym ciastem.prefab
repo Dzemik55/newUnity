@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChildChildrenCount: 0
   newObject: {fileID: 5531799478264299634}
-  newCake: {fileID: 6314286116091825147, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+  newCakeReference: {fileID: 6314286116091825147, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
 --- !u!1001 &5532394278563350663
 PrefabInstance:
   m_ObjectHideFlags: 0

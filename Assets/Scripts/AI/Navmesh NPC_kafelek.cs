@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Navmesh_kafelek : MonoBehaviour
 {
+    GameObject newObject;
     int index;
     public string playerPlate = "";
     public GameObject Tekst;
@@ -35,8 +36,7 @@ public class Navmesh_kafelek : MonoBehaviour
     public int randomIndex;
     public string randomValue;
     public string randomKey;
-    NakladanieCiasta click;
-    NakladanieCiasta[] clickObjects;
+    PlateManager platesManager;
     [SerializeField]
     int pickUpLayerMask;
     int layerMask;
@@ -45,9 +45,7 @@ public class Navmesh_kafelek : MonoBehaviour
     private void Start()
     {
         patienceDuration = 60f;
-        clickObjects = FindObjectsOfType<NakladanieCiasta>();
-        click = GameObject.FindObjectOfType<NakladanieCiasta>();
-        Debug.Log(click.name);
+        platesManager = GameObject.FindObjectOfType<PlateManager>();
 
         pickUpLayerMask = LayerMask.GetMask("Food");
         layerMask = ~pickUpLayerMask;
@@ -256,16 +254,14 @@ public class Navmesh_kafelek : MonoBehaviour
 
                         if (PickUp.currentObject != null)
                         {
-                            index = Array.IndexOf(click.plateObjects, PickUp.currentObject);
+                            index = Array.IndexOf(platesManager.plateObjects, PickUp.currentObject);
 
                             Destroy(PickUp.currentObject);
                         }
-                        GameObject newObject = Instantiate(Plate, click.objectTransforms[index].position, click.objectTransforms[index].rotation);
-                        foreach (NakladanieCiasta clickObject in clickObjects)
-                        {
-                            clickObject.plateObjects[index] = newObject;
-                            clickObject.plateObjects[index].GetComponent<Outline>().enabled = true;
-                        }
+                        newObject = Instantiate(Plate, platesManager.objectTransforms[index].position, platesManager.objectTransforms[index].rotation);
+                        platesManager.plateObjects[index] = newObject;
+                        platesManager.plateObjects[platesManager.currentPlateIndex].GetComponent<Outline>().enabled = true;
+
                         zdjecieBurgera.enabled = false;
                         break;
                     }
@@ -279,6 +275,8 @@ public class Navmesh_kafelek : MonoBehaviour
             yield return null;
         }
     }
+
+
     public float sprawdzanieSkladniki(string playerPlate, string randomKey)
     {
         bool wszystkiePoprawne = true;

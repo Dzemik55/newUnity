@@ -2,33 +2,13 @@ using UnityEngine;
 
 public class NakladanieCiasta : MonoBehaviour
 {
-    public GameObject[] plateObjects;
-    public int currentPlateIndex = 0;
     public Vector3 spawnPosition;
     public static float initialSpawnHeight = 0.1f;
     public string literkaCiasta = "";
-    public TransformData[] objectTransforms;
     RespawnCake cake;
+    public PlateManager plates;
 
-    private void Start()
-    {
-        plateObjects = GameObject.FindGameObjectsWithTag("Plate");
-        plateObjects[currentPlateIndex].GetComponent<Outline>().enabled = true;
-        Invoke("DelayedStart", 2f);
-    }
 
-    private void DelayedStart()
-    {
-        objectTransforms = new TransformData[plateObjects.Length];
-
-        // Iterate over the plateObjects array
-        for (int i = 0; i < plateObjects.Length; i++)
-        {
-            GameObject obj = plateObjects[i];
-            TransformData transformData = new TransformData(obj.transform.position, obj.transform.rotation);
-            objectTransforms[i] = transformData;
-        }
-    }
     private void OnMouseEnter()
     {
         if (OdlozNoz.nozPodniesiony && !OdlozNoz.nozOdlozony)
@@ -38,17 +18,22 @@ public class NakladanieCiasta : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        plates = GameObject.Find("PlateManagment").GetComponent<PlateManager>();
+    }
+
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(1) && OdlozNoz.nozPodniesiony && !OdlozNoz.nozOdlozony)
         {
-            if (currentPlateIndex >= plateObjects.Length)
+            if (plates.currentPlateIndex >= plates.plateObjects.Length)
             {
                 Debug.LogWarning("No plate object available for the current index.");
                 return;
             }
 
-            GameObject currentPlate = plateObjects[currentPlateIndex];
+            GameObject currentPlate = plates.plateObjects[plates.currentPlateIndex];
             if (currentPlate.transform.childCount > 0)
             {
                 int objectCountOnPlate = currentPlate.transform.childCount;
@@ -77,7 +62,7 @@ public class NakladanieCiasta : MonoBehaviour
             transform.SetParent(currentPlate.transform);
             transform.position = spawnPosition;
 
-            plateObjects[currentPlateIndex].GetComponent<Plate>().plateLetters = plateObjects[currentPlateIndex].GetComponent<Plate>().plateLetters + literkaCiasta;
+            plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateLetters = plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateLetters + literkaCiasta;
         }
     }
 
@@ -90,25 +75,7 @@ public class NakladanieCiasta : MonoBehaviour
         }
     }
 
-    private void SwitchPlate()
-    {
-        plateObjects[currentPlateIndex].GetComponent<Outline>().enabled = false;
-        currentPlateIndex++;
-        if (currentPlateIndex >= plateObjects.Length)
-        {
-            currentPlateIndex = 0;
-        }
-        plateObjects[currentPlateIndex].GetComponent<Outline>().enabled = true;
-    }
 
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SwitchPlate();
-        }
-    }
 
 
 
