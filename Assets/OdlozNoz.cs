@@ -3,8 +3,8 @@ using UnityEngine;
 public class OdlozNoz : MonoBehaviour
 {
     public Camera playerCamera;
-    public bool nozPodniesiony = false;
-    public bool nozOdlozony = true;
+    public static bool nozPodniesiony = false;
+    public static bool nozOdlozony = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,21 +64,25 @@ public class OdlozNoz : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Vector3 itemPosition = hit.point + new Vector3(0f, 0.5f, 0f);
-                Transform knifeTransform = playerCamera.transform.Find("knife");
-
-                if (knifeTransform != null)
+                if (hit.collider.gameObject.tag != "Ingredient")
                 {
-                    GameObject knife = knifeTransform.gameObject;
-                    knife.transform.parent = null;
-                    knife.transform.position = itemPosition;
-                    knife.GetComponent<Rigidbody>().useGravity = true;
-                    knife.GetComponent<Rigidbody>().isKinematic = false;
-                    knife.GetComponent<BoxCollider>().enabled = true;
-                    knife.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-                    knife.transform.localScale = new Vector3(0.0300099328f, 0.0300102904f, 0.024555305f);
-                    this.nozPodniesiony = false;
-                    this.nozOdlozony = true;
+                    Vector3 itemPosition = hit.point + new Vector3(0f, 0.5f, 0f);
+                    Transform knifeTransform = playerCamera.transform.Find("knife");
+
+                    if (knifeTransform != null)
+                    {
+                        GameObject knife = knifeTransform.gameObject;
+                        knife.transform.parent = null;
+                        knife.transform.position = itemPosition;
+                        knife.GetComponent<Rigidbody>().useGravity = true;
+                        knife.GetComponent<Rigidbody>().isKinematic = false;
+                        knife.GetComponent<BoxCollider>().enabled = true;
+                        knife.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                        knife.transform.localScale = new Vector3(0.0300099328f, 0.0300102904f, 0.024555305f);
+                        nozPodniesiony = false;
+                        nozOdlozony = true;
+                        Debug.Log("Nó¿ odlozony: " + nozOdlozony);
+                    }
                 }
             }
         }
@@ -112,9 +116,9 @@ public class OdlozNoz : MonoBehaviour
 
                     clickedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePosition;
 
-                    this.nozPodniesiony = true;
-                    this.nozOdlozony = false;
-
+                    nozPodniesiony = true;
+                    nozOdlozony = false;
+                    Debug.Log("Nó¿ odlozony: " + nozPodniesiony);
                 }
             }
         }

@@ -13,6 +13,11 @@ public class PickUp : MonoBehaviour
 
     public static GameObject currentObject; // Reference to the currently picked object
 
+
+    void DestroyRigidbody()
+    {
+        Destroy(GetComponent<Rigidbody>());
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Check for left mouse button click
@@ -33,7 +38,10 @@ public class PickUp : MonoBehaviour
 
                         // Calculate the offset between the object and the camera
                         offset = transform.position - mainCamera.transform.position;
-
+                        if (GetComponent<Rigidbody>() == null)
+                        {
+                            gameObject.AddComponent<Rigidbody>();
+                        }
                         // Disable the object's physics while it's picked up
                         GetComponent<Rigidbody>().isKinematic = true;
                     }
@@ -46,7 +54,9 @@ public class PickUp : MonoBehaviour
                 currentObject = null; // Clear the reference to the picked object
 
                 // Enable the object's physics
+
                 GetComponent<Rigidbody>().isKinematic = false;
+                Invoke("DestroyRigidbody", 0.5f);
             }
         }
 
@@ -85,6 +95,8 @@ public class PickUp : MonoBehaviour
 
     private void Start()
     {
+        distanceFromCamera = 1.5f;
         mainCamera = GameObject.Find("First Person Camera").GetComponent<Camera>();
     }
+
 }
