@@ -366,16 +366,9 @@ public class Navmesh_kafelek : MonoBehaviour
                     else
                     {
                         Debug.Log("Gracz ma takie jedzonko ze sob¹: " + playerPlate);
-                        ocena = /*sprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk)*/ + sprawdzanieSkladniki(playerPlate, randomKey);
-                        bool containsLetters = playerPlate.Contains("A") || playerPlate.Contains("k") || playerPlate.Contains("S");
-                        if (containsLetters)
-                        {
-                            float zabranePunkty = ocena * 0.1f;
-                            float nowePunkty = ocena * 0.9f;
-                            ocena = nowePunkty;
-                            Debug.Log("Zabrano tyle punktów: " + zabranePunkty);
-                        }
-                        Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
+                        ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
+                       
+                        Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
                         isLeaving = true;
                         GameFlow.CustomerCount++;
                         if (PickUp.currentObject != null)
@@ -417,7 +410,7 @@ public class Navmesh_kafelek : MonoBehaviour
         {
             if (i < playerPlate.Length && i < randomKey.Length && playerPlate[i] == randomKey[i])
             {
-                wynik += 0.5f / x;
+                wynik += 0.75f / x;
             }
             else
             {
@@ -427,7 +420,7 @@ public class Navmesh_kafelek : MonoBehaviour
 
         if (wszystkiePoprawne)
         {
-            wynik = 0.5f;
+            wynik = 0.75f;
         }
 
         return wynik;
@@ -466,37 +459,24 @@ public class Navmesh_kafelek : MonoBehaviour
         return wynik;
     }
 
-    public float sprawdzanieCukryMleka(int playersSugar, int playersMilk, int randomSugar, int randomMilk)
+    public float SprawdzanieCukryMleka(int playersSugar, int playersMilk, int randomSugar, int randomMilk)
     {
-        float wynik = 0f;
+        float points = 0.25f; // Pocz¹tkowa wartoœæ punktów
 
-        // Sprawdzenie zgodnoœci iloœci cukru
-        if (playersSugar == randomSugar)
-        {
-            wynik += 0.2f;
-        }
-        else
-        {
-            int roznicaCukru = Math.Abs(playersSugar - randomSugar);
-            wynik += Math.Max(0f, 0.2f - (roznicaCukru * 0.07f));
-        }
+        // Obliczanie ró¿nicy cukru i mleka miêdzy graczem a klientem
+        int sugarDifference = Mathf.Abs(playerSugar - randomSugar);
+        int milkDifference = Mathf.Abs(playerMilk - randomMilk);
 
-        // Sprawdzenie zgodnoœci iloœci mleka
-        if (playersMilk == randomMilk)
-        {
-            wynik += 0.2f;
-        }
-        else
-        {
-            int roznicaMleka = Math.Abs(playersMilk - randomMilk);
-            wynik += Math.Max(0f, 0.2f - (roznicaMleka * 0.07f));
-        }
+        // Obliczanie procentowej obni¿ki punktów na podstawie ró¿nicy cukru i mleka
+        float sugarPenalty = sugarDifference * 0.1f;
+        float milkPenalty = milkDifference * 0.1f;
 
-        // Uwzglêdnienie maksymalnej iloœci punktów (50)
-        wynik *= 0.5f;
+        // Obni¿anie punktów o procentow¹ wartoœæ ró¿nicy
+        points -= points * (sugarPenalty + milkPenalty);
 
-        return wynik;
+        return points;
     }
+
 
 
 }
