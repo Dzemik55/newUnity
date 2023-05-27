@@ -90,7 +90,7 @@ new KeyValuePair<string, string>("RPw", "Ciasto têczowe z Cappucino na wynos")
             spawningRange = Random.Range(20.0f, 30.0f);
         }
 
-        else if (punkty.efficency == 0 && spawnCount < 4)
+        else if (punkty.efficency == 0 && spawnCount < 2)
         {
             spawningRange = 1f;
         }

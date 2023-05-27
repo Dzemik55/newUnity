@@ -50,6 +50,7 @@ public class Navmesh_kafelek : MonoBehaviour
     public Image zdjecieKawy;
     public Image zdjecieMleka;
     public Image zdjecieCukru;
+    public Image zdjecieTwarzy;
     public TextMeshPro cukier_text;
     public TextMeshPro mleko_text;
     string nazwaKawy;
@@ -175,6 +176,7 @@ public class Navmesh_kafelek : MonoBehaviour
                 isActive = false;
                 isLeaving = false;
                 punkty.score += (ocena * currentPatienceValue);
+
                 punkty.efficency = (punkty.score / GameFlow.CustomerCount);
                 Debug.Log("Customers count: " + GameFlow.CustomerCount + ", Punkty: " + punkty.score + ", Efficency: " + punkty.efficency);
                 Destroy(gameObject);
@@ -317,6 +319,8 @@ public class Navmesh_kafelek : MonoBehaviour
             zdjecieKawy.enabled = true;
             zdjecieMleka.enabled = true;
             zdjecieCukru.enabled = true;
+            mleko_text.gameObject.SetActive(true);
+            cukier_text.gameObject.SetActive(true);
             mleko_text.text = orderMilk.ToString();
             cukier_text.text = orderSugar.ToString();
             
@@ -366,9 +370,21 @@ public class Navmesh_kafelek : MonoBehaviour
                     else
                     {
                         Debug.Log("Gracz ma takie jedzonko ze sob¹: " + playerPlate);
-                        ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
-                       
-                        Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
+                        if (playerPlate.Contains("A") || playerPlate.Contains("E") || playerPlate.Contains("P") || playerPlate.Contains("L") || playerPlate.Contains("R") || playerPlate.Contains("Q") || playerPlate.Contains("C"))
+                        {
+                            ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
+                            Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
+                        }
+
+                        else if (!playerPlate.Contains("R") || !playerPlate.Contains("Q") || !playerPlate.Contains("C"))
+                        {
+
+                        }
+                        else
+                        {
+                            ocena = sprawdzanieSkladniki(playerPlate, randomKey);
+                            Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieSkladniki(playerPlate, randomKey));
+                        }
                         isLeaving = true;
                         GameFlow.CustomerCount++;
                         if (PickUp.currentObject != null)
@@ -385,6 +401,24 @@ public class Navmesh_kafelek : MonoBehaviour
                         platesManager.plateObjects[platesManager.currentPlateIndex].GetComponent<Outline>().enabled = true;
 
                         zdjecieCiasta.enabled = false;
+                        zdjecieKawy.enabled = false;
+                        zdjecieCukru.enabled = false;
+                        zdjecieMleka.enabled = false;
+                        cukier_text.gameObject.SetActive(false);
+                        mleko_text.gameObject.SetActive(false);
+                        if (ocena <= 0.3)
+                        {
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("zla_minka");
+                        }
+                        else if(ocena >0.3 && ocena <= 0.7)
+                        {
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("srednia_minka");
+                        }
+                        else if (ocena >0.7)
+                        {
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("wesola_minka");
+                        }
+                        zdjecieTwarzy.enabled = true;
                         break;
                     }
                 }

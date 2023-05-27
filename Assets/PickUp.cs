@@ -1,23 +1,23 @@
-    using UnityEngine;
+using UnityEngine;
 
-    public class PickUp : MonoBehaviour
+public class PickUp : MonoBehaviour
+{
+    public Camera mainCamera;
+    public bool isPickedUp = false;
+    private Vector3 offset;
+    public float distanceFromCamera = 2.0f; // distance between the camera and the object
+    public float followSpeed = 10.0f;
+    public float rotationSpeed = 5.0f; // speed of rotation
+    private bool isRotating = false;
+    private Quaternion targetRotation; // target rotation of the object
+
+    public static GameObject currentObject; // Reference to the currently picked object
+
+    void DestroyRigidbody()
     {
-        public Camera mainCamera;
-        public bool isPickedUp = false;
-        private Vector3 offset;
-        public float distanceFromCamera = 2.0f; // distance between the camera and the object
-        public float followSpeed = 10.0f;
-        public float rotationSpeed = 5.0f; // speed of rotation
-        private bool isRotating = false;
-        private Quaternion targetRotation; // target rotation of the object
+        Destroy(GetComponent<Rigidbody>());
+    }
 
-        public static GameObject currentObject; // Reference to the currently picked object
-
-
-        void DestroyRigidbody()
-        {
-            Destroy(GetComponent<Rigidbody>());
-        }
     private void Update()
     {
         if (OdlozNoz.nozOdlozony)
@@ -34,19 +34,25 @@
                     {
                         if (hit.collider.gameObject == gameObject)
                         {
-                            // Pick up the object
-                            isPickedUp = true;
-                            currentObject = gameObject; // Set the current object as the picked object
+                            // Calculate the distance between the object and the player
+                            float distanceToPlayer = Vector3.Distance(transform.position, mainCamera.transform.position);
 
-                            // Calculate the offset between the object and the camera
-                            offset = transform.position - mainCamera.transform.position;
-                            if (GetComponent<Rigidbody>() == null)
+                            if (distanceToPlayer <= 3f)
                             {
-                                gameObject.AddComponent<Rigidbody>();
+                                // Pick up the object
+                                isPickedUp = true;
+                                currentObject = gameObject; // Set the current object as the picked object
+
+                                // Calculate the offset between the object and the camera
+                                offset = transform.position - mainCamera.transform.position;
+                                if (GetComponent<Rigidbody>() == null)
+                                {
+                                    gameObject.AddComponent<Rigidbody>();
+                                }
+                                // Disable the object's physics while it's picked up
+                                GetComponent<Rigidbody>().isKinematic = true;
+                                Debug.Log("Current Object:" + currentObject.name);
                             }
-                            // Disable the object's physics while it's picked up
-                            GetComponent<Rigidbody>().isKinematic = true;
-                            Debug.Log("Current Object:" + currentObject.name);
                         }
                     }
                 }
@@ -57,12 +63,10 @@
                     currentObject = null; // Clear the reference to the picked object
 
                     // Enable the object's physics
-
                     GetComponent<Rigidbody>().isKinematic = false;
                     Invoke("DestroyRigidbody", 0.5f);
                     if (currentObject != null)
                     {
-
                         Debug.Log("Current Object:" + currentObject.name);
                     }
                     else
@@ -105,10 +109,10 @@
             }
         }
     }
-        private void Start()
-        {
-            distanceFromCamera = 1.5f;
-            mainCamera = GameObject.Find("First Person Camera").GetComponent<Camera>();
-        }
 
+    private void Start()
+    {
+        distanceFromCamera = 1.5f;
+        mainCamera = GameObject.Find("First Person Camera").GetComponent<Camera>();
     }
+}

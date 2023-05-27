@@ -118,6 +118,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {x: 0, y: 0, z: 0}
   literkaCiasta: C
+  literkaKawy: 
+  iloscMleka: 0
+  iloscCukru: 0
   plates: {fileID: 0}
 --- !u!64 &-1201749667853385628
 MeshCollider:
@@ -132,7 +135,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
