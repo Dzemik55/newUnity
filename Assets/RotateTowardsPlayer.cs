@@ -6,7 +6,7 @@ public class RotateTowardsPlayer : MonoBehaviour
     public Slider CierpliwoscSlider;
     float lerpValue;
 
-    CheckAndMoveToFreePoint obj;
+    Navmesh_mak obj;
     float timeElapsed;
 
 

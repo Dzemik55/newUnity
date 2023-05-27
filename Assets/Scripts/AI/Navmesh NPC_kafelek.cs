@@ -163,8 +163,6 @@ public class Navmesh_kafelek : MonoBehaviour
                 // Reset the current register and disable the agent
                 isActive = false;
                 isLeaving = false;
-                punkty.score += (ocena * currentPatienceValue);
-                punkty.efficency = (punkty.score / GameFlow.CustomerCount);
                 Debug.Log("Customers count: " + GameFlow.CustomerCount + ", Punkty: " + punkty.score + ", Efficency: " + punkty.efficency);
                 Destroy(gameObject);
             }
@@ -265,8 +263,22 @@ public class Navmesh_kafelek : MonoBehaviour
                             clickObject.plateObjects[index] = newObject;
                             clickObject.plateObjects[clickObject.currentPlateIndex].GetComponent<Outline>().enabled = true;
                         }
-                        zdjecieBurgera.enabled = false;
+                        punkty.score += (ocena * currentPatienceValue);
+                        punkty.efficency = (punkty.score / GameFlow.CustomerCount);
+                        if (ocena * currentPatienceValue < 50f)
+                        {
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("sadFace");
+                        }
+                        else if (ocena * currentPatienceValue < 75f)
+                        {
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("neutralFace");
+                        }
+                        else
+                        {
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("happyFace");
+                        }
                         break;
+                        
                     }
                 }
             }
