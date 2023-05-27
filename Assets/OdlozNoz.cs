@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OdlozNoz : MonoBehaviour
@@ -64,7 +65,9 @@ public class OdlozNoz : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.gameObject.tag != "Ingredient")
+                if (hit.collider.gameObject.tag != "Ingredient" && hit.collider.gameObject.GetComponent<PickUp>() == null)
+
+
                 {
                     Vector3 itemPosition = hit.point + new Vector3(0f, 0.5f, 0f);
                     Transform knifeTransform = playerCamera.transform.Find("knife");

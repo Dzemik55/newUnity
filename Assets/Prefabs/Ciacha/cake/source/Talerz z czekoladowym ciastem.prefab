@@ -100,7 +100,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -138,9 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb3dc1ec6c7ccf47984324dd0dc433e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChildChildrenCount: 0
   newObject: {fileID: 5531799478264299634}
-  newCakeReference: {fileID: 6314286116091825147, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+  newCake: {fileID: 0}
 --- !u!1001 &5532394278563350663
 PrefabInstance:
   m_ObjectHideFlags: 0

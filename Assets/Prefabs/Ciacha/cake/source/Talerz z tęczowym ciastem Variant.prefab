@@ -76,7 +76,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 20293085696677d40a2cc969adbb2e12, type: 3}
       propertyPath: m_Name
-      value: "Talerz z t\u0119czowym ciastem"
+      value: "Talerz z t\u0119czowym ciastem Variant"
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 20293085696677d40a2cc969adbb2e12, type: 3}
       propertyPath: m_Layer
@@ -136,10 +136,40 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: 20293085696677d40a2cc969adbb2e12, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5780671210493270775}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 20293085696677d40a2cc969adbb2e12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5556623696552611758}
   m_SourcePrefab: {fileID: 100100000, guid: 20293085696677d40a2cc969adbb2e12, type: 3}
 --- !u!4 &9066896162793716367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 20293085696677d40a2cc969adbb2e12, type: 3}
   m_PrefabInstance: {fileID: 9066896162793840655}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9066896162793744047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 20293085696677d40a2cc969adbb2e12, type: 3}
+  m_PrefabInstance: {fileID: 9066896162793840655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &-5556623696552611758
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066896162793744047}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4850532726680341992, guid: 20293085696677d40a2cc969adbb2e12, type: 3}
