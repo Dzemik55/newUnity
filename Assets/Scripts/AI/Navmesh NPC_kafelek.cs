@@ -359,6 +359,15 @@ public class Navmesh_kafelek : MonoBehaviour
                 {
 
                     playerPlate = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersPlate;
+
+                    if (playerPlate.Length > 0 && playerPlate[0] != 'C' && playerPlate[0] != 'R' && playerPlate[0] != 'Q')
+                    {
+                        // Zachowanie oryginalnej wartoœci playersPlate
+                        string originalPlate = playerPlate;
+
+                        // Utworzenie nowego playersPlate z dodanym "Y" na pocz¹tku
+                        playerPlate = "Y" + originalPlate;
+                    }
                     playerMilk = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersMilk;
                     playerSugar = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersSugar;
                     
@@ -370,20 +379,21 @@ public class Navmesh_kafelek : MonoBehaviour
                     else
                     {
                         Debug.Log("Gracz ma takie jedzonko ze sob¹: " + playerPlate);
-                        if (playerPlate.Contains("A") || playerPlate.Contains("E") || playerPlate.Contains("P") || playerPlate.Contains("L") || playerPlate.Contains("R") || playerPlate.Contains("Q") || playerPlate.Contains("C"))
+                        if ((playerPlate.Contains("A") || playerPlate.Contains("E") || playerPlate.Contains("P") || playerPlate.Contains("L")) && (playerPlate.Contains("R") || playerPlate.Contains("Q") || playerPlate.Contains("C")))
                         {
                             ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
-                            Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
+                            Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey) + " Ciasto i kawa");
                         }
 
-                        else if (!playerPlate.Contains("R") || !playerPlate.Contains("Q") || !playerPlate.Contains("C"))
+                        else if ((playerPlate.Contains("A") || playerPlate.Contains("E") || playerPlate.Contains("P") || playerPlate.Contains("L")) && !playerPlate.Contains("R") && !playerPlate.Contains("Q") && !playerPlate.Contains("C"))
                         {
-
+                            ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
+                            Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey) + " Sama kawa");
                         }
-                        else
+                        else if (!playerPlate.Contains("A") || !playerPlate.Contains("E") || !playerPlate.Contains("P") ||! playerPlate.Contains("L"))
                         {
                             ocena = sprawdzanieSkladniki(playerPlate, randomKey);
-                            Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieSkladniki(playerPlate, randomKey));
+                            Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieSkladniki(playerPlate, randomKey) + " Samo ciasto");
                         }
                         isLeaving = true;
                         GameFlow.CustomerCount++;
@@ -408,15 +418,15 @@ public class Navmesh_kafelek : MonoBehaviour
                         mleko_text.gameObject.SetActive(false);
                         if (ocena <= 0.3)
                         {
-                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("zla_minka");
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("sadFace");
                         }
                         else if(ocena >0.3 && ocena <= 0.7)
                         {
-                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("srednia_minka");
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("neutralFace");
                         }
                         else if (ocena >0.7)
                         {
-                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("wesola_minka");
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("happyFace");
                         }
                         zdjecieTwarzy.enabled = true;
                         break;

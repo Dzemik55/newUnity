@@ -57,13 +57,15 @@ new KeyValuePair<string, string>("RPw", "Ciasto têczowe z Cappucino na wynos")
         Customers = GameObject.Find("Customers");
         // Create a new instance of the Random class
         spawnPoint = GameObject.Find("Spawn").transform.position;
+        spawnCount = 0;
+        isSpawning = false;
 
     }
 
 
     void Update()
     {
-        if (!isSpawning && Customers.transform.childCount < 4)
+        if (!isSpawning && Customers.transform.childCount < 2)
         {
             isSpawning = true;
             StartCoroutine(Spawning());

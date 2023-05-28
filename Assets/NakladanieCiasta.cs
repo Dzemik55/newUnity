@@ -24,6 +24,7 @@ public class NakladanieCiasta : MonoBehaviour
 
         if (tag == "Kawa")
         {
+
             literkaKawy = GetComponent<Kawka>().kawaValue;
             iloscCukru = GetComponent<Kawka>().iloscCukru;
             iloscMleka = GetComponent<Kawka>().iloscMleka;

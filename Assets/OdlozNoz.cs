@@ -27,7 +27,7 @@ public class OdlozNoz : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.gameObject.tag != "Ingredient" && hit.collider.gameObject.GetComponent<PickUp>() == null)
+                if (hit.collider.gameObject.tag != "Kawa" && hit.collider.gameObject.tag != "Ingredient" && hit.collider.gameObject.GetComponent<PickUp>() == null && hit.collider.gameObject.GetComponent<MakeACoffe>() == null)
                 {
                     Vector3 itemPosition = hit.point + new Vector3(0f, 0.5f, 0f);
                     Transform knifeTransform = playerCamera.transform.Find("knife");
