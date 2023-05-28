@@ -16,7 +16,6 @@ public class Click : MonoBehaviour
     public Vector3 spawnPosition = new Vector3(0f, 0f, 0f);
     GameObject spawnedObject;
     public string ingredientLetter;
-    private GameObject hoveredObject;
     public GameObject particlePrefab;
 
 
@@ -62,7 +61,10 @@ public class Click : MonoBehaviour
                 GameObject Smoke = Instantiate(particlePrefab);
                 Smoke.transform.SetParent(spawnedObject.transform, false);
                 ParticleSystem.MainModule Smokeps = Smoke.GetComponent<ParticleSystem>().main;
-                Smokeps.startColor = Color.white;
+                Color startColor = Smokeps.startColor.color;
+                startColor = Color.white;
+                startColor.a = 0.5f;
+                Smokeps.startColor = startColor;
             }
             else
             {
