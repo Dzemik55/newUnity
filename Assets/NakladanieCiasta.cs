@@ -142,7 +142,7 @@ public class NakladanieCiasta : MonoBehaviour
                     plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateMilk = iloscMleka;
                     plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateSugar = iloscCukru;
                 }
-                GetComponent<Outline>().enabled = false;
+                Destroy(GetComponent<Outline>());
             }
         }
         else if (Input.GetMouseButtonDown(0) && !OdlozNoz.nozPodniesiony && OdlozNoz.nozOdlozony && tag == "Kawa")
@@ -233,7 +233,7 @@ public class NakladanieCiasta : MonoBehaviour
                 plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateMilk = iloscMleka;
                 plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateSugar = iloscCukru;
             }
-            GetComponent<Outline>().enabled = false;
+            Destroy(GetComponent<Outline>());
         }
     }
 

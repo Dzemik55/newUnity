@@ -8,6 +8,7 @@ TagManager:
   - Plate
   - Patelnia
   - Kawa
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -85,12 +85,12 @@ public class Click : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SwitchPlate();
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SwitchPatelnia();
         }
@@ -102,6 +102,7 @@ public class Click : MonoBehaviour
 
     private void Start()
     {
+        plateObjects = GameObject.FindGameObjectsWithTag("Plate");
         patelniaObjects = GameObject.FindGameObjectsWithTag("Patelnia");
         Debug.Log("Iloœæ patelni: " + patelniaObjects.Length);
         gameObject.GetComponent<Outline>().enabled = false;

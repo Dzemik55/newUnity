@@ -37,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 1472760219206999784}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5526145534954574196
 MeshFilter:
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newObject: {fileID: 5531799478264299634}
-  newCake: {fileID: 0}
+  newCake: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
 --- !u!114 &-5635753366281685273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +228,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6598575603871803326, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+    - {fileID: 6064736621747619528, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+    - {fileID: 5710904972031275567, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+    - {fileID: 1784028599820613915, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+    - {fileID: 5859502512204263643, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+    - {fileID: 1003023559229155456, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+    - {fileID: 4857754552752559573, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+    - {fileID: 5330887769806942612, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
+    - {fileID: 502846027520472773, guid: 2a679d1a33ba7ff40b5007df2e2f2f64, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

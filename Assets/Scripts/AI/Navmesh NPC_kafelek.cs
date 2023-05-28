@@ -275,44 +275,44 @@ public class Navmesh_kafelek : MonoBehaviour
                 nazwaCiasta = "kiwi";
                 nazwaKawy = "cappuccino_w";
             }
-            if (randomValue == "Ciasto têczowe z Latte na miejscu")
+            if (randomValue == "Ciasto tęczowe z Latte na miejscu")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tęczowe";
                 nazwaKawy = "latte_m";
             }
-            if (randomValue == "Ciasto têczowe z Americano na miejscu")
+            if (randomValue == "Ciasto tęczowe z Americano na miejscu")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tęczowe";
                 nazwaKawy = "americano_m";
             }
-            if (randomValue == "Ciasto têczowe z Espresso na miejscu")
+            if (randomValue == "Ciasto tęczowe z Espresso na miejscu")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tęczowe";
                 nazwaKawy = "espresso_m";
             }
-            if (randomValue == "Ciasto têczowe z Cappucino na miejscu")
+            if (randomValue == "Ciasto tęczowe z Cappucino na miejscu")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tęczowe";
                 nazwaKawy = "cappuccino_m";
             }
-            if (randomValue == "Ciasto têczowe z Latte na wynos")
+            if (randomValue == "Ciasto tęczowe z Latte na wynos")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tęczowe";
                 nazwaKawy = "latte_w";
             }
-            if (randomValue == "Ciasto têczowe z Americano na wynos")
+            if (randomValue == "Ciasto tęczowe z Americano na wynos")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tęczowe";
                 nazwaKawy = "americano_w";
             }
-            if (randomValue == "Ciasto têczowe z Espresso na wynos")
+            if (randomValue == "Ciasto tęczowe z Espresso na wynos")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tęczowe";
                 nazwaKawy = "espresso_w";
             }
-            if (randomValue == "Ciasto têczowe z Cappucino na wynos")
+            if (randomValue == "Ciasto tęczowe z Cappucino na wynos")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tęczowe";
                 nazwaKawy = "cappuccino_w";
             }
             zdjecieCiasta.sprite = Resources.Load<Sprite>(nazwaCiasta);
@@ -332,7 +332,7 @@ public class Navmesh_kafelek : MonoBehaviour
 
             if (!isLeaving)
             {
-                lerpValue = currentPatienceValue / 100f; // wartoæ lerp miêdzy 0 a 1
+                lerpValue = currentPatienceValue / 100f; // wartoÂśĂ¦ lerp między 0 a 1
                 Material.color = Color.Lerp(Color.red, Color.green, currentPatienceValue / 100f);
                 timeElapsed += Time.deltaTime;
                 if (timeElapsed > patienceDuration)
@@ -364,10 +364,10 @@ public class Navmesh_kafelek : MonoBehaviour
 
                     if (playerPlate.Length > 0 && playerPlate[0] != 'C' && playerPlate[0] != 'R' && playerPlate[0] != 'Q')
                     {
-                        // Zachowanie oryginalnej wartoci playersPlate
+                        // Zachowanie oryginalnej wartoÂści playersPlate
                         string originalPlate = playerPlate;
 
-                        // Utworzenie nowego playersPlate z dodanym "Y" na pocz¹tku
+                        // Utworzenie nowego playersPlate z dodanym "Y" na poczÂątku
                         playerPlate = "Y" + originalPlate;
                     }
                     playerMilk = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersMilk;
@@ -380,7 +380,7 @@ public class Navmesh_kafelek : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Gracz ma takie jedzonko ze sob¹: " + playerPlate);
+                        Debug.Log("Gracz ma takie jedzonko ze sobÂą: " + playerPlate);
                         if ((playerPlate.Contains("A") || playerPlate.Contains("E") || playerPlate.Contains("P") || playerPlate.Contains("L")) && (playerPlate.Contains("R") || playerPlate.Contains("Q") || playerPlate.Contains("C")))
                         {
                             ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
@@ -422,8 +422,6 @@ public class Navmesh_kafelek : MonoBehaviour
                         {
                             zdjecieTwarzy.sprite = Resources.Load<Sprite>("sadFace");
                         }
-                        punkty.score += (ocena * currentPatienceValue);
-                        punkty.efficency = (punkty.score / GameFlow.CustomerCount);
                         if (ocena * currentPatienceValue < 40f)
                         {
                             zdjecieTwarzy.sprite = Resources.Load<Sprite>("sadFace");
@@ -437,7 +435,7 @@ public class Navmesh_kafelek : MonoBehaviour
                             zdjecieTwarzy.sprite = Resources.Load<Sprite>("happyFace");
                         }
 
-
+                        zdjecieTwarzy.enabled = true;
                         break;
 
                     }
@@ -515,17 +513,17 @@ public class Navmesh_kafelek : MonoBehaviour
 
     public float SprawdzanieCukryMleka(int playersSugar, int playersMilk, int randomSugar, int randomMilk)
     {
-        float points = 0.25f; // Pocz¹tkowa wartoæ punktów
+        float points = 0.25f; // PoczÂątkowa wartoÂśĂ¦ punktĂłw
 
-        // Obliczanie ró¿nicy cukru i mleka miêdzy graczem a klientem
+        // Obliczanie rĂłÂżnicy cukru i mleka między graczem a klientem
         int sugarDifference = Mathf.Abs(playerSugar - randomSugar);
         int milkDifference = Mathf.Abs(playerMilk - randomMilk);
 
-        // Obliczanie procentowej obni¿ki punktów na podstawie ró¿nicy cukru i mleka
+        // Obliczanie procentowej obniÂżki punktĂłw na podstawie rĂłÂżnicy cukru i mleka
         float sugarPenalty = sugarDifference * 0.1f;
         float milkPenalty = milkDifference * 0.1f;
 
-        // Obni¿anie punktów o procentow¹ wartoæ ró¿nicy
+        // ObniÂżanie punktĂłw o procentowÂą wartoÂśĂ¦ rĂłÂżnicy
         points -= points * (sugarPenalty + milkPenalty);
 
         return points;

@@ -44,6 +44,7 @@ public class Navmesh_mak : MonoBehaviour
     string nazwaBurgera;
     private void Start()
     {
+        click = GameObject.Find("Cheese_Slice").GetComponent<Click>();
         patienceDuration = 60f;
         clickObjects = FindObjectsOfType<Click>();
         pickUpLayerMask = LayerMask.GetMask("Food");
@@ -93,6 +94,10 @@ public class Navmesh_mak : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("KlikamUpdate!");
+        }
     }
     private IEnumerator MoveToFreePoint()
     {
@@ -161,7 +166,7 @@ public class Navmesh_mak : MonoBehaviour
                 // Reset the current register and disable the agent
                 isActive = false;
                 isLeaving = false;
-                
+
                 Debug.Log("Customers count: " + GameFlow.CustomerCount + ", Punkty: " + punkty.score + ", Efficency: " + punkty.efficency);
                 Destroy(gameObject);
             }
@@ -226,7 +231,7 @@ public class Navmesh_mak : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-
+                    Debug.Log("Klikam");
                     playerPlate = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersPlate;
                     if (String.IsNullOrEmpty(playerPlate))
                     {
@@ -262,20 +267,20 @@ public class Navmesh_mak : MonoBehaviour
                             clickObject.plateObjects[index] = newObject;
                             clickObject.plateObjects[clickObject.currentPlateIndex].GetComponent<Outline>().enabled = true;
                         }
-                        
+
                         punkty.score += (ocena * currentPatienceValue);
                         punkty.efficency = (punkty.score / GameFlow.CustomerCount);
-                        if (ocena * currentPatienceValue < 50f)
+                        if (ocena * currentPatienceValue < 40f)
                         {
-                            zdjecieBurgera.sprite = Resources.Load<Sprite>("sadFace"); 
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("sadFace");
                         }
-                        else if (ocena * currentPatienceValue < 75f)
+                        else if (ocena * currentPatienceValue < 70f)
                         {
-                            zdjecieBurgera.sprite = Resources.Load<Sprite>("neutralFace"); 
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("neutralFace");
                         }
                         else
                         {
-                            zdjecieBurgera.sprite = Resources.Load<Sprite>("happyFace"); 
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("happyFace");
                         }
                         break;
                     }

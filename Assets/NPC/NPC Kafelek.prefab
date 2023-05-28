@@ -839,12 +839,12 @@ GameObject:
   - component: {fileID: 4872984591837611033}
   - component: {fileID: 7146235818837848472}
   - component: {fileID: 7064702719930285740}
+  - component: {fileID: -2189634566548990706}
   - component: {fileID: 8697160150702620702}
   - component: {fileID: -1780992666367190285}
-  - component: {fileID: -2189634566548990706}
   m_Layer: 0
   m_Name: NPC Kafelek
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -883,14 +883,14 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 4
+  m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!54 &7064702719930285740
@@ -920,36 +920,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!195 &8697160150702620702
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7119208572196781962}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 1
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!222 &-1780992666367190285
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7119208572196781962}
-  m_CullTransparentMesh: 1
 --- !u!114 &-2189634566548990706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,7 +937,6 @@ MonoBehaviour:
   playerMilk: 0
   orderSugar: 0
   orderMilk: 0
-  Tekst: {fileID: 0}
   Plate: {fileID: 1199257847282564, guid: 5c25fbb7b2a978d4a97d97cb90ac8887, type: 3}
   Gradient:
     serializedVersion: 2
@@ -1000,11 +969,11 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   Material: {fileID: 0}
-  wynik: {fileID: 0}
   WaypointsList: {fileID: 0}
   RegistersList: {fileID: 0}
   ExitList: {fileID: 0}
   isActive: 1
+  zadzialaj: 1
   exitPoints: []
   registers: []
   waypoints: []
@@ -1019,7 +988,6 @@ MonoBehaviour:
   randomIndex: 0
   randomValue: 
   randomKey: 
-  pickUpLayerMask: 0
   zdjecieCiasta: {fileID: 5583867036060516905}
   zdjecieKawy: {fileID: 7372742645236446009}
   zdjecieMleka: {fileID: 6542991508094499678}
@@ -1027,6 +995,36 @@ MonoBehaviour:
   zdjecieTwarzy: {fileID: 6859814090259129018}
   cukier_text: {fileID: 999544775405381590}
   mleko_text: {fileID: 2621723493137668993}
+--- !u!195 &8697160150702620702
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119208572196781962}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!222 &-1780992666367190285
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119208572196781962}
+  m_CullTransparentMesh: 1
 --- !u!1 &7119851264049462304
 GameObject:
   m_ObjectHideFlags: 0

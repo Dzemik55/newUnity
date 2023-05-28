@@ -57,11 +57,20 @@ public class Przepisy : MonoBehaviour
     private void Update()
     {
         if (KsiazkaWidoczna)
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 WylaczKsiazke();
                 KsiazkaWidoczna = false;
             }
+    }
+
+    private void OnMouseEnter()
+    {
+        GetComponent<Outline>().enabled = true;
+    }
+    private void OnMouseExit()
+    {
+        GetComponent<Outline>().enabled = false;
     }
 
 }
