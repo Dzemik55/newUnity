@@ -13,11 +13,12 @@ public class NakladanieCiasta : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (OdlozNoz.nozPodniesiony && !OdlozNoz.nozOdlozony && tag=="Ingredient")
+        if (OdlozNoz.nozPodniesiony && !OdlozNoz.nozOdlozony && tag == "Ingredient")
         {
             GetComponent<Outline>().enabled = true;
         }
-        else if(!OdlozNoz.nozPodniesiony && OdlozNoz.nozOdlozony && tag == "Kawa") {
+        else if (!OdlozNoz.nozPodniesiony && OdlozNoz.nozOdlozony && tag == "Kawa")
+        {
             GetComponent<Outline>().enabled = true;
 
         }
@@ -36,15 +37,15 @@ public class NakladanieCiasta : MonoBehaviour
         plates = GameObject.Find("PlateManagment").GetComponent<PlateManager>();
     }
 
-    
+
 
     private void OnMouseOver()
     {
-         float minimalnaOdleglosc = 0.56007f;
-         float maksymalnaOdleglosc = 2.604455f;
+        float minimalnaOdleglosc = 0.56007f;
+        float maksymalnaOdleglosc = 2.604455f;
         if (Input.GetMouseButtonDown(1) && OdlozNoz.nozPodniesiony && !OdlozNoz.nozOdlozony && tag == "Ingredient")
         {
-            
+
             if (plates.currentPlateIndex >= plates.plateObjects.Length)
             {
                 Debug.LogWarning("No plate object available for the current index.");
@@ -141,6 +142,7 @@ public class NakladanieCiasta : MonoBehaviour
                     plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateMilk = iloscMleka;
                     plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateSugar = iloscCukru;
                 }
+                GetComponent<Outline>().enabled = false;
             }
         }
         else if (Input.GetMouseButtonDown(0) && !OdlozNoz.nozPodniesiony && OdlozNoz.nozOdlozony && tag == "Kawa")
@@ -231,6 +233,7 @@ public class NakladanieCiasta : MonoBehaviour
                 plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateMilk = iloscMleka;
                 plates.plateObjects[plates.currentPlateIndex].GetComponent<Plate>().plateSugar = iloscCukru;
             }
+            GetComponent<Outline>().enabled = false;
         }
     }
 

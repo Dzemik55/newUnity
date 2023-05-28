@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5532394279216991804}
   - component: {fileID: 5532394279216991779}
   - component: {fileID: -3895294423297088259}
+  - component: {fileID: -5635753366281685273}
+  - component: {fileID: 2953588108281390195}
   m_Layer: 3
   m_Name: Talerz z czekoladowym ciastem
   m_TagString: Untagged
@@ -140,6 +142,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newObject: {fileID: 5531799478264299634}
   newCake: {fileID: 0}
+--- !u!114 &-5635753366281685273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531799478264299634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae46bf5676a764a4c9c9fccb4407b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2953588108281390195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531799478264299634}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &5532394278563350663
 PrefabInstance:
   m_ObjectHideFlags: 0
