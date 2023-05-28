@@ -11,7 +11,7 @@ public class Navmesh_kafelek : MonoBehaviour
     GameObject newObject;
     int index;
     public string playerPlate = "";
-    public int playerSugar =0;
+    public int playerSugar = 0;
     public int playerMilk = 0;
     public int orderSugar = 0;
     public int orderMilk = 0;
@@ -325,7 +325,7 @@ public class Navmesh_kafelek : MonoBehaviour
             cukier_text.gameObject.SetActive(true);
             mleko_text.text = orderMilk.ToString();
             cukier_text.text = orderSugar.ToString();
-            
+
 
 
 
@@ -372,7 +372,7 @@ public class Navmesh_kafelek : MonoBehaviour
                     }
                     playerMilk = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersMilk;
                     playerSugar = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersSugar;
-                    
+
 
                     if (String.IsNullOrEmpty(playerPlate))
                     {
@@ -392,7 +392,7 @@ public class Navmesh_kafelek : MonoBehaviour
                             ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
                             Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey) + " Sama kawa");
                         }
-                        else if (!playerPlate.Contains("A") || !playerPlate.Contains("E") || !playerPlate.Contains("P") ||! playerPlate.Contains("L"))
+                        else if (!playerPlate.Contains("A") || !playerPlate.Contains("E") || !playerPlate.Contains("P") || !playerPlate.Contains("L"))
                         {
                             ocena = sprawdzanieSkladniki(playerPlate, randomKey);
                             Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieSkladniki(playerPlate, randomKey) + " Samo ciasto");
@@ -424,22 +424,22 @@ public class Navmesh_kafelek : MonoBehaviour
                         }
                         punkty.score += (ocena * currentPatienceValue);
                         punkty.efficency = (punkty.score / GameFlow.CustomerCount);
-                        if (ocena * currentPatienceValue < 50f)
+                        if (ocena * currentPatienceValue < 40f)
                         {
-                            zdjecieBurgera.sprite = Resources.Load<Sprite>("sadFace");
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("sadFace");
                         }
-                        else if (ocena * currentPatienceValue < 75f)
+                        else if (ocena * currentPatienceValue < 70f)
                         {
-                            zdjecieBurgera.sprite = Resources.Load<Sprite>("neutralFace");
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("neutralFace");
                         }
                         else
                         {
-                            zdjecieBurgera.sprite = Resources.Load<Sprite>("happyFace");
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("happyFace");
                         }
 
-                       
+
                         break;
-                        
+
                     }
                 }
             }
