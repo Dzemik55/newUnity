@@ -1,14 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class Navmesh_kafelek : MonoBehaviour
 {
+    GameObject newObject;
     int index;
     public string playerPlate = "";
+    public int playerSugar =0;
+    public int playerMilk = 0;
+    public int orderSugar = 0;
+    public int orderMilk = 0;
     public GameObject Tekst;
     public GameObject Plate;
     public Gradient Gradient = new Gradient();
@@ -35,21 +41,27 @@ public class Navmesh_kafelek : MonoBehaviour
     public int randomIndex;
     public string randomValue;
     public string randomKey;
-    Click click;
-    Click[] clickObjects;
+    PlateManager platesManager;
     [SerializeField]
     int pickUpLayerMask;
     int layerMask;
-    public Image zdjecieBurgera;
-    string nazwaBurgera;
+    public Image zdjecieCiasta;
+    string nazwaCiasta;
+    public Image zdjecieKawy;
+    public Image zdjecieMleka;
+    public Image zdjecieCukru;
+    public Image zdjecieTwarzy;
+    public TextMeshPro cukier_text;
+    public TextMeshPro mleko_text;
+    string nazwaKawy;
     private void Start()
     {
         patienceDuration = 60f;
-        /*clickObjects = FindObjectsOfType<Click>();
-        Debug.Log("D�ugo�� clickObjects:" + clickObjects.Length);
-        click = GameObject.Find("Bulka_dol").GetComponent<Click>();
+        platesManager = GameObject.FindObjectOfType<PlateManager>();
+        orderMilk = UnityEngine.Random.Range(0, 6);
+        orderSugar = UnityEngine.Random.Range(0, 6);
         pickUpLayerMask = LayerMask.GetMask("Food");
-        layerMask = ~pickUpLayerMask;*/
+        layerMask = ~pickUpLayerMask;
         Material = GetComponentInChildren<MeshRenderer>().material;
         Material.color = Color.green;
         wynik = GameObject.Find("wynik");
@@ -80,11 +92,11 @@ public class Navmesh_kafelek : MonoBehaviour
         System.Random random = new System.Random();
 
         // Generate a random index between 0 and the length of the list
-        randomIndex = random.Next(GameFlow.orderValues.Count);
+        randomIndex = random.Next(GameFlow.KafelekOrderValues.Count);
 
         // Access the key of the KeyValuePair at the random index
-        randomKey = GameFlow.orderValues[randomIndex].Key;
-        randomValue = GameFlow.orderValues[randomIndex].Value;
+        randomKey = GameFlow.KafelekOrderValues[randomIndex].Key;
+        randomValue = GameFlow.KafelekOrderValues[randomIndex].Value;
         Debug.Log(randomKey);
         // Print the randomly selected key to the console
         if (!isLeaving)
@@ -163,6 +175,11 @@ public class Navmesh_kafelek : MonoBehaviour
                 // Reset the current register and disable the agent
                 isActive = false;
                 isLeaving = false;
+
+                punkty.score += (ocena * currentPatienceValue);
+
+                punkty.efficency = (punkty.score / GameFlow.CustomerCount);
+
                 Debug.Log("Customers count: " + GameFlow.CustomerCount + ", Punkty: " + punkty.score + ", Efficency: " + punkty.efficency);
                 Destroy(gameObject);
             }
@@ -178,29 +195,144 @@ public class Navmesh_kafelek : MonoBehaviour
 
 
             // Tekst.GetComponent<TextMeshPro>().text = randomKey + "+ " + randomValue;
-            if (randomValue == "Super Meaty")
+            if (randomValue == "Ciasto czekoladowe z Latte na miejscu")
             {
-                nazwaBurgera = "super_meaty";
+                nazwaCiasta = "czekoladowe";
+                nazwaKawy = "latte_m";
             }
-            if (randomValue == "Very Vegetable")
+            if (randomValue == "Ciasto czekoladowe z Americano na miejscu")
             {
-                nazwaBurgera = "vegetable";
+                nazwaCiasta = "czekoladowe";
+                nazwaKawy = "americano_m";
             }
-            if (randomValue == "What?")
+            if (randomValue == "Ciasto czekoladowe z Espresso na miejscu")
             {
-                nazwaBurgera = "what";
+                nazwaCiasta = "czekoladowe";
+                nazwaKawy = "espresso_m";
             }
-            if (randomValue == "Double Burger")
+            if (randomValue == "Ciasto czekoladowe z Cappucino na miejscu")
             {
-                nazwaBurgera = "double";
+                nazwaCiasta = "czekoladowe";
+                nazwaKawy = "cappuccino_m";
             }
-            /*zdjecieBurgera.sprite = Resources.Load<Sprite>(nazwaBurgera);
-            zdjecieBurgera.enabled = true;*/
+            if (randomValue == "Ciasto czekoladowe z Latte na wynos")
+            {
+                nazwaCiasta = "czekoladowe";
+                nazwaKawy = "latte_w";
+            }
+            if (randomValue == "Ciasto czekoladowe z Americano na wynos")
+            {
+                nazwaCiasta = "czekoladowe";
+                nazwaKawy = "americano_w";
+            }
+            if (randomValue == "Ciasto czekoladowe z Espresso na wynos")
+            {
+                nazwaCiasta = "czekoladowe";
+                nazwaKawy = "espresso_w";
+            }
+            if (randomValue == "Ciasto czekoladowe z Cappucino na wynos")
+            {
+                nazwaCiasta = "czekoladowe";
+                nazwaKawy = "cappuccino_w";
+            }
+            if (randomValue == "Ciasto kiwi z Latte na miejscu")
+            {
+                nazwaCiasta = "kiwi";
+                nazwaKawy = "latte_m";
+            }
+            if (randomValue == "Ciasto kiwi z Americano na miejscu")
+            {
+                nazwaCiasta = "kiwi";
+                nazwaKawy = "americano_m";
+            }
+            if (randomValue == "Ciasto kiwi z Espresso na miejscu")
+            {
+                nazwaCiasta = "kiwi";
+                nazwaKawy = "espresso_m";
+            }
+            if (randomValue == "Ciasto kiwi z Cappucino na miejscu")
+            {
+                nazwaCiasta = "kiwi";
+                nazwaKawy = "cappuccino_m";
+            }
+            if (randomValue == "Ciasto kiwi z Latte na wynos")
+            {
+                nazwaCiasta = "kiwi";
+                nazwaKawy = "latte_w";
+            }
+            if (randomValue == "Ciasto kiwi z Americano na wynos")
+            {
+                nazwaCiasta = "kiwi";
+                nazwaKawy = "americano_w";
+            }
+            if (randomValue == "Ciasto kiwi z Espresso na wynos")
+            {
+                nazwaCiasta = "kiwi";
+                nazwaKawy = "espresso_w";
+            }
+            if (randomValue == "Ciasto kiwi z Cappucino na wynos")
+            {
+                nazwaCiasta = "kiwi";
+                nazwaKawy = "cappuccino_w";
+            }
+            if (randomValue == "Ciasto têczowe z Latte na miejscu")
+            {
+                nazwaCiasta = "têczowe";
+                nazwaKawy = "latte_m";
+            }
+            if (randomValue == "Ciasto têczowe z Americano na miejscu")
+            {
+                nazwaCiasta = "têczowe";
+                nazwaKawy = "americano_m";
+            }
+            if (randomValue == "Ciasto têczowe z Espresso na miejscu")
+            {
+                nazwaCiasta = "têczowe";
+                nazwaKawy = "espresso_m";
+            }
+            if (randomValue == "Ciasto têczowe z Cappucino na miejscu")
+            {
+                nazwaCiasta = "têczowe";
+                nazwaKawy = "cappuccino_m";
+            }
+            if (randomValue == "Ciasto têczowe z Latte na wynos")
+            {
+                nazwaCiasta = "têczowe";
+                nazwaKawy = "latte_w";
+            }
+            if (randomValue == "Ciasto têczowe z Americano na wynos")
+            {
+                nazwaCiasta = "têczowe";
+                nazwaKawy = "americano_w";
+            }
+            if (randomValue == "Ciasto têczowe z Espresso na wynos")
+            {
+                nazwaCiasta = "têczowe";
+                nazwaKawy = "espresso_w";
+            }
+            if (randomValue == "Ciasto têczowe z Cappucino na wynos")
+            {
+                nazwaCiasta = "têczowe";
+                nazwaKawy = "cappuccino_w";
+            }
+            zdjecieCiasta.sprite = Resources.Load<Sprite>(nazwaCiasta);
+            zdjecieCiasta.enabled = true;
+            zdjecieKawy.sprite = Resources.Load<Sprite>(nazwaKawy);
+            zdjecieKawy.enabled = true;
+            zdjecieMleka.enabled = true;
+            zdjecieCukru.enabled = true;
+            mleko_text.gameObject.SetActive(true);
+            cukier_text.gameObject.SetActive(true);
+            mleko_text.text = orderMilk.ToString();
+            cukier_text.text = orderSugar.ToString();
+            
+
+
 
 
             if (!isLeaving)
             {
-                lerpValue = currentPatienceValue / 100f; // warto�� lerp mi�dzy 0 a 1
+                lerpValue = currentPatienceValue / 100f; // wartoæ lerp miêdzy 0 a 1
                 Material.color = Color.Lerp(Color.red, Color.green, currentPatienceValue / 100f);
                 timeElapsed += Time.deltaTime;
                 if (timeElapsed > patienceDuration)
@@ -229,23 +361,42 @@ public class Navmesh_kafelek : MonoBehaviour
                 {
 
                     playerPlate = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersPlate;
+
+                    if (playerPlate.Length > 0 && playerPlate[0] != 'C' && playerPlate[0] != 'R' && playerPlate[0] != 'Q')
+                    {
+                        // Zachowanie oryginalnej wartoci playersPlate
+                        string originalPlate = playerPlate;
+
+                        // Utworzenie nowego playersPlate z dodanym "Y" na pocz¹tku
+                        playerPlate = "Y" + originalPlate;
+                    }
+                    playerMilk = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersMilk;
+                    playerSugar = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersSugar;
+                    
+
                     if (String.IsNullOrEmpty(playerPlate))
                     {
                         Debug.Log("playerPlate: " + playerPlate);
                     }
                     else
                     {
-                        Debug.Log("Gracz ma takie jedzonko ze sob�: " + playerPlate);
-                        ocena = sprawdzanieKolejnosc(playerPlate, randomKey) + sprawdzanieSkladniki(playerPlate, randomKey);
-                        bool containsLetters = playerPlate.Contains("A") || playerPlate.Contains("k") || playerPlate.Contains("S");
-                        if (containsLetters)
+                        Debug.Log("Gracz ma takie jedzonko ze sob¹: " + playerPlate);
+                        if ((playerPlate.Contains("A") || playerPlate.Contains("E") || playerPlate.Contains("P") || playerPlate.Contains("L")) && (playerPlate.Contains("R") || playerPlate.Contains("Q") || playerPlate.Contains("C")))
                         {
-                            float zabranePunkty = ocena * 0.1f;
-                            float nowePunkty = ocena * 0.9f;
-                            ocena = nowePunkty;
-                            Debug.Log("Zabrano tyle punkt�w: " + zabranePunkty);
+                            ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
+                            Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey) + " Ciasto i kawa");
                         }
-                        Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieKolejnosc(playerPlate, randomKey) + " + " + sprawdzanieSkladniki(playerPlate, randomKey));
+
+                        else if ((playerPlate.Contains("A") || playerPlate.Contains("E") || playerPlate.Contains("P") || playerPlate.Contains("L")) && !playerPlate.Contains("R") && !playerPlate.Contains("Q") && !playerPlate.Contains("C"))
+                        {
+                            ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
+                            Debug.Log(randomValue + " : " + ocena + " = " + SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + " + " + sprawdzanieSkladniki(playerPlate, randomKey) + " Sama kawa");
+                        }
+                        else if (!playerPlate.Contains("A") || !playerPlate.Contains("E") || !playerPlate.Contains("P") ||! playerPlate.Contains("L"))
+                        {
+                            ocena = sprawdzanieSkladniki(playerPlate, randomKey);
+                            Debug.Log(randomValue + " : " + ocena + " = " + sprawdzanieSkladniki(playerPlate, randomKey) + " Samo ciasto");
+                        }
                         isLeaving = true;
                         GameFlow.CustomerCount++;
                         if (PickUp.currentObject != null)
@@ -253,15 +404,23 @@ public class Navmesh_kafelek : MonoBehaviour
 
                         if (PickUp.currentObject != null)
                         {
-                            index = Array.IndexOf(click.plateObjects, PickUp.currentObject);
+                            index = Array.IndexOf(platesManager.plateObjects, PickUp.currentObject);
 
                             Destroy(PickUp.currentObject);
                         }
-                        GameObject newObject = Instantiate(Plate, click.objectTransforms[index].position, click.objectTransforms[index].rotation);
-                        foreach (Click clickObject in clickObjects)
+                        newObject = Instantiate(Plate, platesManager.objectTransforms[index].position, platesManager.objectTransforms[index].rotation);
+                        platesManager.plateObjects[index] = newObject;
+                        platesManager.plateObjects[platesManager.currentPlateIndex].GetComponent<Outline>().enabled = true;
+
+                        zdjecieCiasta.enabled = false;
+                        zdjecieKawy.enabled = false;
+                        zdjecieCukru.enabled = false;
+                        zdjecieMleka.enabled = false;
+                        cukier_text.gameObject.SetActive(false);
+                        mleko_text.gameObject.SetActive(false);
+                        if (ocena <= 0.3)
                         {
-                            clickObject.plateObjects[index] = newObject;
-                            clickObject.plateObjects[clickObject.currentPlateIndex].GetComponent<Outline>().enabled = true;
+                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("sadFace");
                         }
                         punkty.score += (ocena * currentPatienceValue);
                         punkty.efficency = (punkty.score / GameFlow.CustomerCount);
@@ -277,6 +436,8 @@ public class Navmesh_kafelek : MonoBehaviour
                         {
                             zdjecieBurgera.sprite = Resources.Load<Sprite>("happyFace");
                         }
+
+                       
                         break;
                         
                     }
@@ -290,6 +451,8 @@ public class Navmesh_kafelek : MonoBehaviour
             yield return null;
         }
     }
+
+
     public float sprawdzanieSkladniki(string playerPlate, string randomKey)
     {
         bool wszystkiePoprawne = true;
@@ -301,7 +464,7 @@ public class Navmesh_kafelek : MonoBehaviour
         {
             if (i < playerPlate.Length && i < randomKey.Length && playerPlate[i] == randomKey[i])
             {
-                wynik += 0.7f / x;
+                wynik += 0.75f / x;
             }
             else
             {
@@ -311,7 +474,7 @@ public class Navmesh_kafelek : MonoBehaviour
 
         if (wszystkiePoprawne)
         {
-            wynik = 0.7f;
+            wynik = 0.75f;
         }
 
         return wynik;
@@ -349,5 +512,25 @@ public class Navmesh_kafelek : MonoBehaviour
 
         return wynik;
     }
+
+    public float SprawdzanieCukryMleka(int playersSugar, int playersMilk, int randomSugar, int randomMilk)
+    {
+        float points = 0.25f; // Pocz¹tkowa wartoæ punktów
+
+        // Obliczanie ró¿nicy cukru i mleka miêdzy graczem a klientem
+        int sugarDifference = Mathf.Abs(playerSugar - randomSugar);
+        int milkDifference = Mathf.Abs(playerMilk - randomMilk);
+
+        // Obliczanie procentowej obni¿ki punktów na podstawie ró¿nicy cukru i mleka
+        float sugarPenalty = sugarDifference * 0.1f;
+        float milkPenalty = milkDifference * 0.1f;
+
+        // Obni¿anie punktów o procentow¹ wartoæ ró¿nicy
+        points -= points * (sugarPenalty + milkPenalty);
+
+        return points;
+    }
+
+
 
 }

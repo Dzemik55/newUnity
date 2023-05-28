@@ -1,0 +1,636 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6314286116091825147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6392658276177466991}
+  m_Layer: 0
+  m_Name: "Czekoladowe w kawa\u0142kach"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6392658276177466991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6314286116091825147}
+  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.433, y: 0.89100003, z: -5.622}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2930245429236976906}
+  - {fileID: 7470129638176590427}
+  - {fileID: 7870624715095240218}
+  - {fileID: 2574741640933577551}
+  - {fileID: 9151603614593223444}
+  - {fileID: 3932207564951044820}
+  - {fileID: 6994390032012052960}
+  - {fileID: 8825472721818418439}
+  - {fileID: 8485622757405842545}
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2363542224178984024
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0030001178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9374681
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -9.2370556e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.34807134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000015214766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -319.261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &8485622757405842545 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 2363542224178984024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3030648570034578237
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0030001178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.12539484
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 3.4416914e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9921069
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000004336641
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -165.593
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &9151603614593223444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 3030648570034578237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3419465216983078190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0030001178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.76349586
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -5.5067062e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.64581275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000028229497
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -279.547
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &8825472721818418439 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 3419465216983078190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3649387406954881650
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0030001178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93310773
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 2.3092639e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.35959706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000015718477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -42.151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &7470129638176590427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 3649387406954881650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3755739839269102025
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0030001178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5144962
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1.9539925e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8574926
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000037482334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -241.92801
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &6994390032012052960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 3755739839269102025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4049882492396570163
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0030001178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.73719954
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 2.4868996e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.67567515
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000029534686
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -85.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &7870624715095240218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 4049882492396570163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7177612058172893949
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0030001178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.20602228
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1.4210855e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.97854733
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000042773763
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -203.779
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &3932207564951044820 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 7177612058172893949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8553831237347113830
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0030001178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.44813216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 2.5757174e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8939674
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000039076525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -126.752
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &2574741640933577551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 8553831237347113830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9053452824458274083
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6392658276177466991}
+    m_Modifications:
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.158
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.009000072
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836971920684115367, guid: a46dfaa050e00db429c352319960379d, type: 3}
+      propertyPath: m_Name
+      value: SliceCzekoladowe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a46dfaa050e00db429c352319960379d, type: 3}
+--- !u!4 &2930245429236976906 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6128838140912625705, guid: a46dfaa050e00db429c352319960379d, type: 3}
+  m_PrefabInstance: {fileID: 9053452824458274083}
+  m_PrefabAsset: {fileID: 0}

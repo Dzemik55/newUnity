@@ -13,6 +13,11 @@ public class punkty : MonoBehaviour
         text.text = "Punkty: " + score.ToString(); // oryginalna wartoœæ
     }
 
+    private void Start()
+    {
+        score = 0;
+    }
+
     private void Update()
     {
 

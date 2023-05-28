@@ -1,0 +1,636 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7711222454137125602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8660506146523244492}
+  m_Layer: 0
+  m_Name: KiwiCale
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8660506146523244492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711222454137125602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5590283842701716006}
+  - {fileID: 3103595377252237415}
+  - {fileID: 8129349012297251062}
+  - {fileID: 8401879886841803706}
+  - {fileID: 5046720667909171457}
+  - {fileID: 566836056258040266}
+  - {fileID: 1342532953414899108}
+  - {fileID: 693924628916731889}
+  - {fileID: 3114247229403861735}
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &361579801991846127
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &5590283842701716006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 361579801991846127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1052073019165400008
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.135724
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1.3677946e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9907467
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000001614135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -164.399
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &5046720667909171457 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 1052073019165400008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4053526329262279231
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7409092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -2.842171e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.67160517
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000010941844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -84.382
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &8129349012297251062 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 4053526329262279231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4326061891761537395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.46559617
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -8.526512e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.88499725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000014418455
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -124.502
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &8401879886841803706 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 4326061891761537395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4697654250069593400
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.77543384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -5.5422333e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6314289
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000010287318
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -281.689
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &693924628916731889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 4697654250069593400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5714492885124883203
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.20152304
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -2.5757177e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9794838
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000015957859
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -203.252
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &566836056258040266 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 5714492885124883203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6499145031494166381
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.51943135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -4.2277293e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8545122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000001392182
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -242.588
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &1342532953414899108 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 6499145031494166381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7170316569595310766
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9348179
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1.4210855e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.35512742
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000005785764
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -41.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &3103595377252237415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 7170316569595310766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7181055824056672302
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8660506146523244492}
+    m_Modifications:
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9478734
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -6.5369937e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3186472
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000005191438
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -322.838
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769824550661012966, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+      propertyPath: m_Name
+      value: SliceKiwi (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+--- !u!4 &3114247229403861735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5228744465014420169, guid: 5d35be5fb53b21f48a645bad690cf822, type: 3}
+  m_PrefabInstance: {fileID: 7181055824056672302}
+  m_PrefabAsset: {fileID: 0}

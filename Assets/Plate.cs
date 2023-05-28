@@ -7,6 +7,8 @@ public class Plate : MonoBehaviour
     // Time interval between logs
     public string DanieGracza = "";
     GameObject gracz;
+    public int plateMilk = 0;
+    public int plateSugar = 0;
 
     private void Update()
     {
