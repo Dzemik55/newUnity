@@ -175,9 +175,11 @@ public class Navmesh_kafelek : MonoBehaviour
                 // Reset the current register and disable the agent
                 isActive = false;
                 isLeaving = false;
+
                 punkty.score += (ocena * currentPatienceValue);
 
                 punkty.efficency = (punkty.score / GameFlow.CustomerCount);
+
                 Debug.Log("Customers count: " + GameFlow.CustomerCount + ", Punkty: " + punkty.score + ", Efficency: " + punkty.efficency);
                 Destroy(gameObject);
             }
@@ -273,44 +275,44 @@ public class Navmesh_kafelek : MonoBehaviour
                 nazwaCiasta = "kiwi";
                 nazwaKawy = "cappuccino_w";
             }
-            if (randomValue == "Ciasto têczowe z Latte na miejscu")
+            if (randomValue == "Ciasto tÃªczowe z Latte na miejscu")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tÃªczowe";
                 nazwaKawy = "latte_m";
             }
-            if (randomValue == "Ciasto têczowe z Americano na miejscu")
+            if (randomValue == "Ciasto tÃªczowe z Americano na miejscu")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tÃªczowe";
                 nazwaKawy = "americano_m";
             }
-            if (randomValue == "Ciasto têczowe z Espresso na miejscu")
+            if (randomValue == "Ciasto tÃªczowe z Espresso na miejscu")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tÃªczowe";
                 nazwaKawy = "espresso_m";
             }
-            if (randomValue == "Ciasto têczowe z Cappucino na miejscu")
+            if (randomValue == "Ciasto tÃªczowe z Cappucino na miejscu")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tÃªczowe";
                 nazwaKawy = "cappuccino_m";
             }
-            if (randomValue == "Ciasto têczowe z Latte na wynos")
+            if (randomValue == "Ciasto tÃªczowe z Latte na wynos")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tÃªczowe";
                 nazwaKawy = "latte_w";
             }
-            if (randomValue == "Ciasto têczowe z Americano na wynos")
+            if (randomValue == "Ciasto tÃªczowe z Americano na wynos")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tÃªczowe";
                 nazwaKawy = "americano_w";
             }
-            if (randomValue == "Ciasto têczowe z Espresso na wynos")
+            if (randomValue == "Ciasto tÃªczowe z Espresso na wynos")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tÃªczowe";
                 nazwaKawy = "espresso_w";
             }
-            if (randomValue == "Ciasto têczowe z Cappucino na wynos")
+            if (randomValue == "Ciasto tÃªczowe z Cappucino na wynos")
             {
-                nazwaCiasta = "têczowe";
+                nazwaCiasta = "tÃªczowe";
                 nazwaKawy = "cappuccino_w";
             }
             zdjecieCiasta.sprite = Resources.Load<Sprite>(nazwaCiasta);
@@ -330,7 +332,7 @@ public class Navmesh_kafelek : MonoBehaviour
 
             if (!isLeaving)
             {
-                lerpValue = currentPatienceValue / 100f; // wartoœæ lerp miêdzy 0 a 1
+                lerpValue = currentPatienceValue / 100f; // wartoÂœÃ¦ lerp miÃªdzy 0 a 1
                 Material.color = Color.Lerp(Color.red, Color.green, currentPatienceValue / 100f);
                 timeElapsed += Time.deltaTime;
                 if (timeElapsed > patienceDuration)
@@ -362,10 +364,10 @@ public class Navmesh_kafelek : MonoBehaviour
 
                     if (playerPlate.Length > 0 && playerPlate[0] != 'C' && playerPlate[0] != 'R' && playerPlate[0] != 'Q')
                     {
-                        // Zachowanie oryginalnej wartoœci playersPlate
+                        // Zachowanie oryginalnej wartoÂœci playersPlate
                         string originalPlate = playerPlate;
 
-                        // Utworzenie nowego playersPlate z dodanym "Y" na pocz¹tku
+                        // Utworzenie nowego playersPlate z dodanym "Y" na poczÂ¹tku
                         playerPlate = "Y" + originalPlate;
                     }
                     playerMilk = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersMilk;
@@ -378,7 +380,7 @@ public class Navmesh_kafelek : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Gracz ma takie jedzonko ze sob¹: " + playerPlate);
+                        Debug.Log("Gracz ma takie jedzonko ze sobÂ¹: " + playerPlate);
                         if ((playerPlate.Contains("A") || playerPlate.Contains("E") || playerPlate.Contains("P") || playerPlate.Contains("L")) && (playerPlate.Contains("R") || playerPlate.Contains("Q") || playerPlate.Contains("C")))
                         {
                             ocena = SprawdzanieCukryMleka(playerSugar, playerMilk, orderSugar, orderMilk) + sprawdzanieSkladniki(playerPlate, randomKey);
@@ -420,16 +422,24 @@ public class Navmesh_kafelek : MonoBehaviour
                         {
                             zdjecieTwarzy.sprite = Resources.Load<Sprite>("sadFace");
                         }
-                        else if(ocena >0.3 && ocena <= 0.7)
+                        punkty.score += (ocena * currentPatienceValue);
+                        punkty.efficency = (punkty.score / GameFlow.CustomerCount);
+                        if (ocena * currentPatienceValue < 50f)
                         {
-                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("neutralFace");
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("sadFace");
                         }
-                        else if (ocena >0.7)
+                        else if (ocena * currentPatienceValue < 75f)
                         {
-                            zdjecieTwarzy.sprite = Resources.Load<Sprite>("happyFace");
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("neutralFace");
                         }
-                        zdjecieTwarzy.enabled = true;
+                        else
+                        {
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("happyFace");
+                        }
+
+                       
                         break;
+                        
                     }
                 }
             }
@@ -505,17 +515,17 @@ public class Navmesh_kafelek : MonoBehaviour
 
     public float SprawdzanieCukryMleka(int playersSugar, int playersMilk, int randomSugar, int randomMilk)
     {
-        float points = 0.25f; // Pocz¹tkowa wartoœæ punktów
+        float points = 0.25f; // PoczÂ¹tkowa wartoÂœÃ¦ punktÃ³w
 
-        // Obliczanie ró¿nicy cukru i mleka miêdzy graczem a klientem
+        // Obliczanie rÃ³Â¿nicy cukru i mleka miÃªdzy graczem a klientem
         int sugarDifference = Mathf.Abs(playerSugar - randomSugar);
         int milkDifference = Mathf.Abs(playerMilk - randomMilk);
 
-        // Obliczanie procentowej obni¿ki punktów na podstawie ró¿nicy cukru i mleka
+        // Obliczanie procentowej obniÂ¿ki punktÃ³w na podstawie rÃ³Â¿nicy cukru i mleka
         float sugarPenalty = sugarDifference * 0.1f;
         float milkPenalty = milkDifference * 0.1f;
 
-        // Obni¿anie punktów o procentow¹ wartoœæ ró¿nicy
+        // ObniÂ¿anie punktÃ³w o procentowÂ¹ wartoÂœÃ¦ rÃ³Â¿nicy
         points -= points * (sugarPenalty + milkPenalty);
 
         return points;

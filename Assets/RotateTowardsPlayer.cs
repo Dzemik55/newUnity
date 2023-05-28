@@ -5,7 +5,7 @@ public class RotateTowardsPlayer : MonoBehaviour
 {
     float lerpValue;
 
-    CheckAndMoveToFreePoint obj;
+    Navmesh_mak obj;
     float timeElapsed;
 
 
