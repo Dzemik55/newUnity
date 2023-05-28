@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Drawing;
 using UnityEngine;
 
 public class CookMove : MonoBehaviour
@@ -13,6 +14,7 @@ public class CookMove : MonoBehaviour
     Click click;
     public Vector3 spawnPosition;
     public GameObject PatelniaNaKtorejLeze;
+    public GameObject particlePrefab;
     void Start()
     {
         click = Click.instance;
@@ -47,6 +49,8 @@ public class CookMove : MonoBehaviour
         GetComponent<Transform>().position = spawnPosition;
         GetComponent<Transform>().transform.parent = click.plateObjects[click.currentPlateIndex].transform;
         gameObject.GetComponent<PlacedIngredient>().enabled = true;
+        GameObject smoke = gameObject.transform.Find("Smoke(Clone)").gameObject;
+        smoke.SetActive(false);
         if (isReady && !isBurned)
         {
             if (gameObject.name.Contains("Bacon"))
@@ -99,6 +103,17 @@ public class CookMove : MonoBehaviour
             meatMaterial.material = newMaterial;
             // meatMaterial.material.mainTexture = newTexture;
             isReady = true;
+            GameObject smoke = gameObject.transform.Find("Smoke(Clone)").gameObject;
+            ParticleSystem.MainModule Smokeps = smoke.GetComponent<ParticleSystem>().main;
+            UnityEngine.Color startColor = Smokeps.startColor.color;
+
+            float brightnessFactor = 1.6f;
+            startColor = UnityEngine.Color.grey;
+            startColor.r *= brightnessFactor;
+            startColor.g *= brightnessFactor;
+            startColor.b *= brightnessFactor;
+            startColor.a = 0.5f;
+            Smokeps.startColor = startColor;
             Debug.Log("is Ready: " + isReady);
         }
     }
@@ -111,6 +126,13 @@ public class CookMove : MonoBehaviour
             meatMaterial.material = burnedMaterial;
             // meatMaterial.material.mainTexture = newTexture;
             isBurned = true;
+            GameObject smoke = gameObject.transform.Find("Smoke(Clone)").gameObject;
+            ParticleSystem.MainModule Smokeps = smoke.GetComponent<ParticleSystem>().main;
+            UnityEngine.Color startColor = Smokeps.startColor.color;
+            startColor = UnityEngine.Color.black;
+            startColor.a = 0.5f;
+            Smokeps.startColor = startColor;
+
             Debug.Log("is Burned: " + isBurned);
         }
     }

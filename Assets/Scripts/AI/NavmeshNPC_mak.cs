@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class CheckAndMoveToFreePoint : MonoBehaviour
+public class Navmesh_mak : MonoBehaviour
 {
     int index;
     public string playerPlate = "";
@@ -46,8 +46,6 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
     {
         patienceDuration = 60f;
         clickObjects = FindObjectsOfType<Click>();
-        Debug.Log("D³ugoœæ clickObjects:" + clickObjects.Length);
-        click = GameObject.Find("Bulka_dol").GetComponent<Click>();
         pickUpLayerMask = LayerMask.GetMask("Food");
         layerMask = ~pickUpLayerMask;
         Material = GetComponentInChildren<MeshRenderer>().material;
@@ -163,8 +161,7 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                 // Reset the current register and disable the agent
                 isActive = false;
                 isLeaving = false;
-                punkty.score += (ocena * currentPatienceValue);
-                punkty.efficency = (punkty.score / GameFlow.CustomerCount);
+                
                 Debug.Log("Customers count: " + GameFlow.CustomerCount + ", Punkty: " + punkty.score + ", Efficency: " + punkty.efficency);
                 Destroy(gameObject);
             }
@@ -265,7 +262,21 @@ public class CheckAndMoveToFreePoint : MonoBehaviour
                             clickObject.plateObjects[index] = newObject;
                             clickObject.plateObjects[clickObject.currentPlateIndex].GetComponent<Outline>().enabled = true;
                         }
-                        zdjecieBurgera.enabled = false;
+                        
+                        punkty.score += (ocena * currentPatienceValue);
+                        punkty.efficency = (punkty.score / GameFlow.CustomerCount);
+                        if (ocena * currentPatienceValue < 50f)
+                        {
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("sadFace"); 
+                        }
+                        else if (ocena * currentPatienceValue < 75f)
+                        {
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("neutralFace"); 
+                        }
+                        else
+                        {
+                            zdjecieBurgera.sprite = Resources.Load<Sprite>("happyFace"); 
+                        }
                         break;
                     }
                 }

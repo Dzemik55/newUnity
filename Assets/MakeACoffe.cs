@@ -11,8 +11,9 @@ public class MakeACoffe : MonoBehaviour
     public Slider cukierSlider;
     public Slider mlekoSlider;
     public GameObject KawkaLatteObject;
-    public GameObject KawkaMochaObject;
+    public GameObject KawkaCappucinoObject;
     public GameObject KawkaAmericanoObject;
+    public GameObject KawkaEspressoObject;
     public GameObject NaWynosObject;
     private GameObject ostatnioUtworzonyObiekt;
     public TextMeshProUGUI IstniejeKawkaText;
@@ -44,6 +45,7 @@ public class MakeACoffe : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 firstPersonLook.canRotate = true;
+                GameObject.Find("First Person Controller").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
                 panel.GetComponent<Image>().enabled = false;
                 isPanelActive = false;
                 iloscCukru = 0;
@@ -71,6 +73,7 @@ public class MakeACoffe : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 firstPersonLook.canRotate = false;
+                GameObject.Find("First Person Controller").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
                 panel.GetComponent<Image>().enabled = true;
                 isPanelActive = true;
                 Transform[] children = panel.GetComponentsInChildren<Transform>(true);
@@ -91,12 +94,9 @@ public class MakeACoffe : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        interactionDistance = (Vector3.Distance(transform.position, playerTransform.position));
-    }
     private void OnMouseDown()
     {
+        interactionDistance = (Vector3.Distance(transform.position, playerTransform.position));
         if (interactionDistance <= 3f)
         {
             WlaczPanel();
@@ -105,29 +105,41 @@ public class MakeACoffe : MonoBehaviour
 
     public void DodajCukier()
     {
-        cukierSlider.value += 0.2f;
-        iloscCukru += 1;
+        if (iloscCukru < 5)
+        {
+            cukierSlider.value += 0.2f;
+            iloscCukru += 1;
+        }
         Debug.Log(iloscCukru);
     }
 
     public void OdejmikCukier()
     {
-        cukierSlider.value -= 0.2f;
-        iloscCukru -= 1;
+        if (iloscCukru > 0)
+        {
+            cukierSlider.value -= 0.2f;
+            iloscCukru -= 1;
+        }
         Debug.Log(iloscCukru);
     }
 
     public void DodajMleko()
     {
-        mlekoSlider.value += 0.2f;
-        iloscMleka += 1;
+        if (iloscMleka < 5)
+        {
+            mlekoSlider.value += 0.2f;
+            iloscMleka += 1;
+        }
         Debug.Log(iloscMleka);
     }
 
     public void OdejmikMleko()
     {
-        mlekoSlider.value -= 0.2f;
-        iloscMleka -= 1;
+        if (iloscMleka > 0)
+        {
+            mlekoSlider.value -= 0.2f;
+            iloscMleka -= 1;
+        }
         Debug.Log(iloscMleka);
     }
 
@@ -163,6 +175,10 @@ public class MakeACoffe : MonoBehaviour
         {
             Kawa = "Cappucino";
         }
+        if (buttonName == "Espresso_button")
+        {
+            Kawa = "Espresso";
+        }
         Debug.Log(Kawa);
     }
 
@@ -188,7 +204,7 @@ public class MakeACoffe : MonoBehaviour
                 // There is no Kawka object at the given position
                 if (Kawa == "Latte" && !naWynos)
                 {
-                    ostatnioUtworzonyObiekt = Instantiate(KawkaLatteObject, positionToCheck, Quaternion.identity);
+                    ostatnioUtworzonyObiekt = Instantiate(KawkaLatteObject, new Vector3(2.95499992f, 1.49699998f, -4.29699993f), Quaternion.identity);
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;
@@ -197,7 +213,7 @@ public class MakeACoffe : MonoBehaviour
                 }
                 if (Kawa == "Americano" && !naWynos)
                 {
-                    ostatnioUtworzonyObiekt = Instantiate(KawkaAmericanoObject, positionToCheck, Quaternion.identity);
+                    ostatnioUtworzonyObiekt = Instantiate(KawkaAmericanoObject, positionToCheck, Quaternion.Euler(-90f,0,0));
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;
@@ -206,7 +222,16 @@ public class MakeACoffe : MonoBehaviour
                 }
                 if (Kawa == "Cappucino" && !naWynos)
                 {
-                    ostatnioUtworzonyObiekt = Instantiate(KawkaMochaObject, positionToCheck, Quaternion.identity);
+                    ostatnioUtworzonyObiekt = Instantiate(KawkaCappucinoObject, positionToCheck, Quaternion.Euler(-90f, 0, 0));
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;
+                    ostatnioUtworzonyObiekt.GetComponent<Kawka>().naWynos = naWynos;
+                    WylaczPanel();
+                }
+                if (Kawa == "Espresso" && !naWynos)
+                {
+                    ostatnioUtworzonyObiekt = Instantiate(KawkaEspressoObject, positionToCheck, Quaternion.identity);
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().Kawa = Kawa;
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscCukru = iloscCukru;
                     ostatnioUtworzonyObiekt.GetComponent<Kawka>().iloscMleka = iloscMleka;

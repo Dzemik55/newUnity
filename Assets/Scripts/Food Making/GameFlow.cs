@@ -20,6 +20,36 @@ public class GameFlow : MonoBehaviour
     new KeyValuePair<string, string>("brPOliqeB", "What?")
 };
 
+    public static List<KeyValuePair<string, string>> KafelekOrderValues = new List<KeyValuePair<string, string>>
+{
+   new KeyValuePair<string, string>("CLm", "Ciasto czekoladowe z Latte na miejscu"),
+new KeyValuePair<string, string>("CAm", "Ciasto czekoladowe z Americano na miejscu"),
+new KeyValuePair<string, string>("CEm", "Ciasto czekoladowe z Espresso na miejscu"),
+new KeyValuePair<string, string>("CPm", "Ciasto czekoladowe z Cappucino na miejscu"),
+new KeyValuePair<string, string>("CLw", "Ciasto czekoladowe z Latte na wynos"),
+new KeyValuePair<string, string>("CAw", "Ciasto czekoladowe z Americano na wynos"),
+new KeyValuePair<string, string>("CEw", "Ciasto czekoladowe z Espresso na wynos"),
+new KeyValuePair<string, string>("CPw", "Ciasto czekoladowe z Cappucino na wynos"),
+new KeyValuePair<string, string>("QLm", "Ciasto kiwi z Latte na miejscu"),
+new KeyValuePair<string, string>("QAm", "Ciasto kiwi z Americano na miejscu"),
+new KeyValuePair<string, string>("QEm", "Ciasto kiwi z Espresso na miejscu"),
+new KeyValuePair<string, string>("QPm", "Ciasto kiwi z Cappucino na miejscu"),
+new KeyValuePair<string, string>("QLw", "Ciasto kiwi z Latte na wynos"),
+new KeyValuePair<string, string>("QAw", "Ciasto kiwi z Americano na wynos"),
+new KeyValuePair<string, string>("QEw", "Ciasto kiwi z Espresso na wynos"),
+new KeyValuePair<string, string>("QPw", "Ciasto kiwi z Cappucino na wynos"),
+new KeyValuePair<string, string>("RLm", "Ciasto têczowe z Latte na miejscu"),
+new KeyValuePair<string, string>("RAm", "Ciasto têczowe z Americano na miejscu"),
+new KeyValuePair<string, string>("REm", "Ciasto têczowe z Espresso na miejscu"),
+new KeyValuePair<string, string>("RPm", "Ciasto têczowe z Cappucino na miejscu"),
+new KeyValuePair<string, string>("RLw", "Ciasto têczowe z Latte na wynos"),
+new KeyValuePair<string, string>("RAw", "Ciasto têczowe z Americano na wynos"),
+new KeyValuePair<string, string>("REw", "Ciasto têczowe z Espresso na wynos"),
+new KeyValuePair<string, string>("RPw", "Ciasto têczowe z Cappucino na wynos")
+
+};
+
+
 
     void Start()
     {
@@ -27,13 +57,15 @@ public class GameFlow : MonoBehaviour
         Customers = GameObject.Find("Customers");
         // Create a new instance of the Random class
         spawnPoint = GameObject.Find("Spawn").transform.position;
+        spawnCount = 0;
+        isSpawning = false;
 
     }
 
 
     void Update()
     {
-        if (!isSpawning && Customers.transform.childCount < 4)
+        if (!isSpawning && Customers.transform.childCount < 2)
         {
             isSpawning = true;
             StartCoroutine(Spawning());
@@ -60,7 +92,7 @@ public class GameFlow : MonoBehaviour
             spawningRange = Random.Range(20.0f, 30.0f);
         }
 
-        else if (punkty.efficency == 0 && spawnCount < 4)
+        else if (punkty.efficency == 0 && spawnCount < 2)
         {
             spawningRange = 1f;
         }

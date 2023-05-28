@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kafelek.unity
     guid: 2053bd4916d2e5145b402c05b9f31cac
+  - enabled: 1
+    path: Assets/Scenes/TutorialMak.unity
+    guid: 99c7dd7ea76443c40b2f3fbd65d96fb0
+  - enabled: 1
+    path: Assets/Scenes/TutorialKafelek.unity
+    guid: 081c26c1412647a41ada8c9193604f1e
   m_configObjects: {}
