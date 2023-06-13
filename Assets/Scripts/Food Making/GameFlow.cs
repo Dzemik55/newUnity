@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameFlow : MonoBehaviour
 {
@@ -59,16 +60,28 @@ new KeyValuePair<string, string>("RPw", "Ciasto têczowe z Cappucino na wynos")
         spawnPoint = GameObject.Find("Spawn").transform.position;
         spawnCount = 0;
         isSpawning = false;
+        spawningRange = 1f;
 
     }
 
 
     void Update()
     {
-        if (!isSpawning && Customers.transform.childCount < 2)
+        if (SceneManager.GetActiveScene().name == "ScenaMakowa")
         {
-            isSpawning = true;
-            StartCoroutine(Spawning());
+            if (!isSpawning && Customers.transform.childCount < 4)
+            {
+                isSpawning = true;
+                StartCoroutine(Spawning());
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Kafelek")
+        {
+            if (!isSpawning && Customers.transform.childCount < 2)
+            {
+                isSpawning = true;
+                StartCoroutine(Spawning());
+            }
         }
     }
 
@@ -92,7 +105,12 @@ new KeyValuePair<string, string>("RPw", "Ciasto têczowe z Cappucino na wynos")
             spawningRange = Random.Range(20.0f, 30.0f);
         }
 
-        else if (punkty.efficency == 0 && spawnCount < 2)
+        else if (punkty.efficency == 0 && spawnCount < 2 && SceneManager.GetActiveScene().name == "Kafelek")
+        {
+            spawningRange = 1f;
+        }
+
+        else if (punkty.efficency == 0 && spawnCount < 4 && SceneManager.GetActiveScene().name == "ScenaMakowa")
         {
             spawningRange = 1f;
         }

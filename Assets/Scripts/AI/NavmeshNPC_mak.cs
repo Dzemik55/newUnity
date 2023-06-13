@@ -92,13 +92,7 @@ public class Navmesh_mak : MonoBehaviour
         }
 
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("KlikamUpdate!");
-        }
-    }
+
     private IEnumerator MoveToFreePoint()
     {
         while (true)

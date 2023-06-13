@@ -242,7 +242,8 @@ public class NakladanieCiasta : MonoBehaviour
     {
         if (OdlozNoz.nozPodniesiony && !OdlozNoz.nozOdlozony)
         {
-            GetComponent<Outline>().enabled = false;
+            if (GetComponent<Outline>() != null)
+                GetComponent<Outline>().enabled = false;
         }
     }
 

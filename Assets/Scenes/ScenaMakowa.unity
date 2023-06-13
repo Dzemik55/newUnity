@@ -1165,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: recipeBook
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 745d59fdf85c1b747bea64a347512f07, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1174,10 +1178,10 @@ PrefabInstance:
       addedObject: {fileID: 1644158554}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 745d59fdf85c1b747bea64a347512f07, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1644158558}
+      addedObject: {fileID: 1644158562}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 745d59fdf85c1b747bea64a347512f07, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1644158562}
+      addedObject: {fileID: 1644158566}
   m_SourcePrefab: {fileID: 100100000, guid: 745d59fdf85c1b747bea64a347512f07, type: 3}
 --- !u!1001 &223448328
 PrefabInstance:
@@ -3294,7 +3298,7 @@ GameObject:
   - component: {fileID: 452437752}
   - component: {fileID: 452437754}
   - component: {fileID: 452437753}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Ksiazka_Strona1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3591,7 +3595,7 @@ GameObject:
   - component: {fileID: 462787533}
   - component: {fileID: 462787532}
   - component: {fileID: 462787531}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Strona2_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3663,7 +3667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1644158558}
+      - m_Target: {fileID: 1644158566}
         m_TargetAssemblyTypeName: Przepisy, Assembly-CSharp
         m_MethodName: PoprzedniaStrona
         m_Mode: 1
@@ -4537,7 +4541,7 @@ GameObject:
   - component: {fileID: 516390996}
   - component: {fileID: 516390998}
   - component: {fileID: 516390997}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Ksiazka_Strona2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6624,7 +6628,7 @@ GameObject:
   - component: {fileID: 730664972}
   - component: {fileID: 730664974}
   - component: {fileID: 730664973}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11712,7 +11716,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 291527183}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -12361,7 +12365,7 @@ GameObject:
   - component: {fileID: 1183546785}
   - component: {fileID: 1183546787}
   - component: {fileID: 1183546786}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13333,7 +13337,7 @@ GameObject:
   - component: {fileID: 1257155439}
   - component: {fileID: 1257155438}
   - component: {fileID: 1257155437}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Strona1_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13405,7 +13409,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1644158558}
+      - m_Target: {fileID: 1644158566}
         m_TargetAssemblyTypeName: Przepisy, Assembly-CSharp
         m_MethodName: NastepnaStrona
         m_Mode: 1
@@ -17544,23 +17548,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01333378, y: 0.01644596, z: 0.0022575757}
   m_Center: {x: 0.00050513586, y: 0, z: 0.0011777121}
---- !u!114 &1644158558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644158553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84152f73d383b724d81bdf5cc7b9f08a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cofnij_button: {fileID: 462787528}
-  next_button: {fileID: 1257155435}
-  pierwsza_strona: {fileID: 452437751}
-  druga_strona: {fileID: 516390995}
-  KsiazkaWidoczna: 0
 --- !u!114 &1644158562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17579,6 +17566,23 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1644158566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644158553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84152f73d383b724d81bdf5cc7b9f08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cofnij_button: {fileID: 462787528}
+  next_button: {fileID: 1257155435}
+  pierwsza_strona: {fileID: 452437751}
+  druga_strona: {fileID: 516390995}
+  KsiazkaWidoczna: 0
 --- !u!1001 &1659447441
 PrefabInstance:
   m_ObjectHideFlags: 0

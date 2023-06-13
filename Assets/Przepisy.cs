@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Przepisy : MonoBehaviour
@@ -6,16 +7,24 @@ public class Przepisy : MonoBehaviour
     public GameObject next_button;
     public GameObject pierwsza_strona;
     public GameObject druga_strona;
+    private bool cooldownActive = false;
+    private float cooldownDuration = 0.25f;
     public bool KsiazkaWidoczna = false;
 
 
+    private void Start()
+    {
+
+    }
 
     public void WlaczKsiazke()
     {
+        Debug.Log("Wlaczam Ksiazke!");
         pierwsza_strona.SetActive(true);
         next_button.SetActive(true);
         cofnij_button.SetActive(false);
         druga_strona.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Confined;
     }
 
@@ -46,22 +55,41 @@ public class Przepisy : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (!KsiazkaWidoczna)
-            if (Input.GetKeyDown(KeyCode.F))
+        if (KsiazkaWidoczna == false)
+        {
+            if (Input.GetKeyDown(KeyCode.F) && !cooldownActive)
             {
                 WlaczKsiazke();
                 KsiazkaWidoczna = true;
+                StartCooldown();
             }
+        }
+
     }
 
     private void Update()
     {
-        if (KsiazkaWidoczna)
-            if (Input.GetKeyDown(KeyCode.F))
+        if (KsiazkaWidoczna == true)
+        {
+            if (Input.GetKeyDown(KeyCode.F) && !cooldownActive)
             {
                 WylaczKsiazke();
                 KsiazkaWidoczna = false;
+                StartCooldown();
             }
+        }
+    }
+
+    private void StartCooldown()
+    {
+        cooldownActive = true;
+        StartCoroutine(ResetCooldown());
+    }
+
+    private IEnumerator ResetCooldown()
+    {
+        yield return new WaitForSeconds(cooldownDuration);
+        cooldownActive = false;
     }
 
     private void OnMouseEnter()
@@ -72,5 +100,4 @@ public class Przepisy : MonoBehaviour
     {
         GetComponent<Outline>().enabled = false;
     }
-
 }

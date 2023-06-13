@@ -4,12 +4,14 @@ public class Talerzyk : MonoBehaviour
 {
     private void OnMouseEnter()
     {
-        GetComponent<Outline>().enabled = true;
+        /*if (GetComponent<Outline>() != null)
+            GetComponent<Outline>().enabled = true;*/
     }
 
     private void OnMouseExit()
     {
-        GetComponent<Outline>().enabled = false;
+        /* if (GetComponent<Outline>() != null)
+             GetComponent<Outline>().enabled = false;*/
     }
 
 }
