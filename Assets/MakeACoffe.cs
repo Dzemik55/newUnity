@@ -20,6 +20,7 @@ public class MakeACoffe : MonoBehaviour
     public Toggle naWynosToggle;
     public bool naWynos = false;
 
+    public PauseMenu pauseMenu;
     public float interactionDistance;
     public Transform playerTransform;
 
@@ -43,7 +44,9 @@ public class MakeACoffe : MonoBehaviour
         {
             if (isPanelActive)
             {
+                pauseMenu.enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 firstPersonLook.canRotate = true;
                 GameObject.Find("First Person Controller").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
                 panel.GetComponent<Image>().enabled = false;
@@ -71,7 +74,9 @@ public class MakeACoffe : MonoBehaviour
         {
             if (!isPanelActive)
             {
+                pauseMenu.enabled = false;
                 Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
                 firstPersonLook.canRotate = false;
                 GameObject.Find("First Person Controller").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
                 panel.GetComponent<Image>().enabled = true;
@@ -96,6 +101,7 @@ public class MakeACoffe : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (!enabled) return;
         interactionDistance = (Vector3.Distance(transform.position, playerTransform.position));
         if (interactionDistance <= 3f)
         {

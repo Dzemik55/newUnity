@@ -7,13 +7,15 @@ public class PauseMenu : MonoBehaviour
     public FirstPersonLook firstPersonLookScript; // Referencja do skryptu "First Person Look"
     private bool isPaused = false;
     private GameObject celownik;
+    public MakeACoffe coffe;
+    public MakeACoffe coffe2;
     private void Start()
     {
         celownik = GameObject.Find("Celownik");
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             if (isPaused)
             {
@@ -28,6 +30,14 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        if (coffe != null)
+        {
+            coffe.enabled = true;
+        }
+        if (coffe2 != null)
+        {
+            coffe2.enabled = true;
+        }
         celownik.SetActive(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -40,6 +50,14 @@ public class PauseMenu : MonoBehaviour
 
     void PauseGame()
     {
+        if(coffe != null)
+        {
+            coffe.enabled = false;
+        }
+        if (coffe2 != null)
+        {
+            coffe2.enabled = false;
+        }
         celownik.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;

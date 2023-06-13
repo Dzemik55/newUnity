@@ -7,6 +7,9 @@ public class Przepisy : MonoBehaviour
     public GameObject next_button;
     public GameObject pierwsza_strona;
     public GameObject druga_strona;
+    public FirstPersonLook firstPersonLookScript;
+    public FirstPersonMovement firstPersonMovement;
+    public PauseMenu pauseMenu;
     private bool cooldownActive = false;
     private float cooldownDuration = 0.25f;
     public bool KsiazkaWidoczna = false;
@@ -19,6 +22,9 @@ public class Przepisy : MonoBehaviour
 
     public void WlaczKsiazke()
     {
+        firstPersonMovement.enabled = false;
+        pauseMenu.enabled = false;
+        firstPersonLookScript.enabled = false;
         Debug.Log("Wlaczam Ksiazke!");
         pierwsza_strona.SetActive(true);
         next_button.SetActive(true);
@@ -30,6 +36,9 @@ public class Przepisy : MonoBehaviour
 
     public void WylaczKsiazke()
     {
+        firstPersonMovement.enabled = true;
+        pauseMenu.enabled = true;
+        firstPersonLookScript.enabled = true;
         pierwsza_strona.SetActive(false);
         next_button.SetActive(false);
         cofnij_button.SetActive(false);

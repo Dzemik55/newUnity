@@ -5190,6 +5190,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2088951932853053969, guid: a478cf2e8e8c4014fa4be32bffca50c8, type: 3}
+      propertyPath: coffe
+      value: 
+      objectReference: {fileID: 1378692334}
+    - target: {fileID: 2088951932853053969, guid: a478cf2e8e8c4014fa4be32bffca50c8, type: 3}
+      propertyPath: coffe2
+      value: 
+      objectReference: {fileID: 1705490802}
+    - target: {fileID: 2088951932853053969, guid: a478cf2e8e8c4014fa4be32bffca50c8, type: 3}
       propertyPath: firstPersonLookScript
       value: 
       objectReference: {fileID: 1362863749}
@@ -13407,6 +13415,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &895061228 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2088951932853053969, guid: a478cf2e8e8c4014fa4be32bffca50c8, type: 3}
+  m_PrefabInstance: {fileID: 391817169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421e767a473bf084d9d0977ca9f57d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &901044671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25058,6 +25077,7 @@ MonoBehaviour:
   IstniejeKawkaText: {fileID: 534827490}
   naWynosToggle: {fileID: 74954754}
   naWynos: 0
+  pauseMenu: {fileID: 895061228}
   interactionDistance: 1
   playerTransform: {fileID: 45006942}
   Kawa: 
@@ -30132,6 +30152,7 @@ MonoBehaviour:
   IstniejeKawkaText: {fileID: 534827490}
   naWynosToggle: {fileID: 74954754}
   naWynos: 0
+  pauseMenu: {fileID: 895061228}
   interactionDistance: 1
   playerTransform: {fileID: 45006942}
   Kawa: 
