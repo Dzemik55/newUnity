@@ -374,7 +374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64e579303170ab4abf11d1deb7f80ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CierpliwoscSlider: {fileID: 0}
 --- !u!1 &6060957785512113978
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64e579303170ab4abf11d1deb7f80ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CierpliwoscSlider: {fileID: 2193175046138844913}
 --- !u!1 &7031993415326235349
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +760,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickUp : MonoBehaviour
 {
@@ -45,9 +46,14 @@ public class PickUp : MonoBehaviour
 
                                 // Calculate the offset between the object and the camera
                                 offset = transform.position - mainCamera.transform.position;
-                                if (GetComponent<Rigidbody>() == null)
+                                if (SceneManager.GetActiveScene().name == "Kafelek")
                                 {
-                                    gameObject.AddComponent<Rigidbody>();
+                                    if (GetComponent<Rigidbody>() == null)
+                                    {
+                                        {
+                                            gameObject.AddComponent<Rigidbody>();
+                                        }
+                                    }
                                 }
                                 // Disable the object's physics while it's picked up
                                 GetComponent<Rigidbody>().isKinematic = true;
@@ -60,11 +66,15 @@ public class PickUp : MonoBehaviour
                 {
                     // Drop the object
                     isPickedUp = false;
+                    GameObject lastObject = currentObject;
                     currentObject = null; // Clear the reference to the picked object
 
                     // Enable the object's physics
                     GetComponent<Rigidbody>().isKinematic = false;
-                    Invoke("DestroyRigidbody", 0.5f);
+                    if (SceneManager.GetActiveScene().name == "Kafelek" && lastObject.tag != "Plate")
+                    {
+                        Invoke("DestroyRigidbody", 1f);
+                    }
                     if (currentObject != null)
                     {
                         Debug.Log("Current Object:" + currentObject.name);

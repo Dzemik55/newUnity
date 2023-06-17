@@ -22,28 +22,31 @@ public class Przepisy : MonoBehaviour
 
     public void WlaczKsiazke()
     {
-        firstPersonMovement.enabled = false;
+        GameObject.Find("First Person Controller").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         pauseMenu.enabled = false;
-        firstPersonLookScript.enabled = false;
+        firstPersonLookScript.canRotate = false;
         Debug.Log("Wlaczam Ksiazke!");
         pierwsza_strona.SetActive(true);
         next_button.SetActive(true);
         cofnij_button.SetActive(false);
         druga_strona.SetActive(false);
+        Cursor.visible = true;
 
         Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void WylaczKsiazke()
     {
-        firstPersonMovement.enabled = true;
+        GameObject.Find("First Person Controller").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         pauseMenu.enabled = true;
-        firstPersonLookScript.enabled = true;
+        firstPersonLookScript.canRotate = true;
+
         pierwsza_strona.SetActive(false);
         next_button.SetActive(false);
         cofnij_button.SetActive(false);
         druga_strona.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void NastepnaStrona()

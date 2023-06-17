@@ -114,7 +114,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -138,6 +138,8 @@ MonoBehaviour:
   spawnHeight: 0
   plateLetters: 
   DanieGracza: 
+  plateMilk: 0
+  plateSugar: 0
 --- !u!114 &591842778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +183,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &8433137512662065096
 MonoBehaviour:
   m_ObjectHideFlags: 0

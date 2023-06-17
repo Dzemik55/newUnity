@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameFlow : MonoBehaviour
 {
-    private int spawnCount = 0;
-    private float spawningRange = 15f;
+    public  static int spawnCount = 0;
+    public static float spawningRange = 1f;
     public static int CustomerCount = 0;
     public GameObject Customers;
     public GameObject spawn;
     private Vector3 spawnPoint;
-    private bool isSpawning = false;
+    public static bool isSpawning = false;
     public static int plateValue = 00000;
     public static List<KeyValuePair<string, string>> orderValues = new List<KeyValuePair<string, string>>
 {
@@ -59,8 +59,12 @@ new KeyValuePair<string, string>("RPw", "Ciasto têczowe z Cappucino na wynos")
         // Create a new instance of the Random class
         spawnPoint = GameObject.Find("Spawn").transform.position;
         spawnCount = 0;
+        Debug.Log("Spawn count: " + spawnCount);
         isSpawning = false;
+        Debug.Log("is spawning: " +  isSpawning);
         spawningRange = 1f;
+        CustomerCount = 0;
+        Debug.Log("spawning range: " + spawningRange);
 
     }
 

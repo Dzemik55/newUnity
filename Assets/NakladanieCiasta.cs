@@ -240,11 +240,10 @@ public class NakladanieCiasta : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (OdlozNoz.nozPodniesiony && !OdlozNoz.nozOdlozony)
-        {
+        
             if (GetComponent<Outline>() != null)
                 GetComponent<Outline>().enabled = false;
-        }
+        
     }
 
 

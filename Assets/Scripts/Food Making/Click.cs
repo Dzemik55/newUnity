@@ -104,7 +104,6 @@ public class Click : MonoBehaviour
     {
         plateObjects = GameObject.FindGameObjectsWithTag("Plate");
         patelniaObjects = GameObject.FindGameObjectsWithTag("Patelnia");
-        Debug.Log("Iloœæ patelni: " + patelniaObjects.Length);
         gameObject.GetComponent<Outline>().enabled = false;
         plateObjects[currentPlateIndex].GetComponent<Outline>().enabled = true;
         patelniaObjects[currentPatelniaIndex].GetComponent<Outline>().enabled = true;

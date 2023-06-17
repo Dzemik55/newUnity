@@ -225,7 +225,6 @@ public class Navmesh_mak : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    Debug.Log("Klikam");
                     playerPlate = GameObject.Find("First Person Controller").GetComponent<PlateOnHand>().playersPlate;
                     if (String.IsNullOrEmpty(playerPlate))
                     {

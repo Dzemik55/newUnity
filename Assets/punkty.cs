@@ -16,6 +16,7 @@ public class punkty : MonoBehaviour
     private void Start()
     {
         score = 0;
+        efficency = 0;
     }
 
     private void Update()

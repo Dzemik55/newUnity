@@ -15,5 +15,11 @@ public class PlateOnHand : MonoBehaviour
             playersSugar = PickUp.currentObject.GetComponent<Plate>().plateSugar;
             playersMilk = PickUp.currentObject.GetComponent<Plate>().plateMilk;
         }
+        else if (PickUp.currentObject == null)
+        {
+            playersPlate = string.Empty;
+            playersSugar = 0;
+            playersMilk = 0;
+        }
     }
 }

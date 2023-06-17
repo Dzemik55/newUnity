@@ -883,7 +883,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 72
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -912,7 +912,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -937,6 +937,7 @@ MonoBehaviour:
   playerMilk: 0
   orderSugar: 0
   orderMilk: 0
+  Tekst: {fileID: 0}
   Plate: {fileID: 1199257847282564, guid: 5c25fbb7b2a978d4a97d97cb90ac8887, type: 3}
   Gradient:
     serializedVersion: 2
@@ -969,11 +970,11 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   Material: {fileID: 0}
+  wynik: {fileID: 0}
   WaypointsList: {fileID: 0}
   RegistersList: {fileID: 0}
   ExitList: {fileID: 0}
   isActive: 1
-  zadzialaj: 1
   exitPoints: []
   registers: []
   waypoints: []
@@ -988,6 +989,7 @@ MonoBehaviour:
   randomIndex: 0
   randomValue: 
   randomKey: 
+  pickUpLayerMask: 0
   zdjecieCiasta: {fileID: 5583867036060516905}
   zdjecieKawy: {fileID: 7372742645236446009}
   zdjecieMleka: {fileID: 6542991508094499678}
